@@ -7,6 +7,10 @@ class SessionController {
     async initial(req,res){
         res.render('initial');
     }
+
+    async meuperfil(req,res){
+        res.render('ConfiguracoesPerfilUsuario');
+    }
 }
 
 export default new SessionController();

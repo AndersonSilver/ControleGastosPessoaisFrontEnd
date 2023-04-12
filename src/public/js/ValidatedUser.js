@@ -1,4 +1,5 @@
 async function signIn(){
+  
   const email = document.getElementById("emailLogin").value;
   const password = document.getElementById("passwordLogin").value;
 
@@ -42,6 +43,7 @@ async function signIn(){
     return;
   } else {
     try {
+      
       const response = await fetch(
         `http://localhost:3000/searchUser?email=${email}`
       );
@@ -54,12 +56,13 @@ async function signIn(){
 
       } 
       else if (user.password != password) {
+        // else if (user.password != password) {
 
         console.log(user.password, password);
         setError("password", "Incorrect password");
 
       } 
-      else if (user.email === email && user.password === password) {
+      else if ((user.email === email) && (user.password === password)) {
 
         console.log("teste");
 
