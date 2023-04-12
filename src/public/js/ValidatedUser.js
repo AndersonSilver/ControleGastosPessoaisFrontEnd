@@ -62,7 +62,7 @@ async function signIn(){
         setError("password", "Incorrect password");
 
       } 
-      else if ((user.email === email) && (user.password === password)) {
+      else if (user.email === email && user.password === password) {
 
         console.log("teste");
 
