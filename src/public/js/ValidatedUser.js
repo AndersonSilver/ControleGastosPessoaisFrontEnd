@@ -18,13 +18,14 @@ async function signIn(){
 
   function setError(field, message) {
     if (!errors[field]) {
-      //${field.charAt(0).toUpperCase() + field.slice(1)}
+
       const errorDiv = document.getElementById("returnErrorsLogin");
       const pError = document.createElement("p");
       pError.innerHTML = message;
       pError.className = "error";
       errorDiv.appendChild(pError);
       errors[field] = true;
+      
     }
   }
 
@@ -44,11 +45,13 @@ async function signIn(){
   } else {
     try {
       
-      const response = await fetch(
-        `http://localhost:3000/searchUser?email=${email}`
-      );
+      // Faz a requisição para o backend e salva na variável response
+      const response = await fetch(`http://localhost:3000/searchUser?email=${email}`);
+
+      // Pega o resultado da requisição e salva na variável result em formato json
       const result = await response.json();
-      const user = result[0];
+      const user = result;
+
 
       if (user == undefined) {
 
@@ -56,8 +59,6 @@ async function signIn(){
 
       } 
       else if (user.password != password) {
-        // else if (user.password != password) {
-
         console.log(user.password, password);
         setError("password", "Incorrect password");
 
