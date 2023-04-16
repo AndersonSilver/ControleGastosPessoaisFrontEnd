@@ -13,6 +13,7 @@
     background-color: #ffffff;
     border-radius: 5vh;
     position: static;
+    min-height: 600px;
 
 }
 
@@ -28,11 +29,13 @@
     width: 90%;
     height: 80%;
     border-radius: 10vh;
+    
 }
 .containerMain .containerLeft label{
     display: flex;
     flex-direction: column;
     background-color: transparent;
+    
 }
 
 .containerLeft{
@@ -69,3 +72,144 @@ input {
     color: #000000;
   }
   
+  @media only screen and (max-width: 1600px) {
+    .containerLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1vh;
+    }
+    .containerDireito{
+
+        display: flex;
+        flex-direction: column;
+        margin-top: -19vh;
+        gap: 5vh;
+    
+    }
+    input {
+       width: 100%;
+    }
+    /* adicione outras regras CSS aqui conforme necessário */
+ }
+
+ @media only screen and (max-width: 1360px) {
+    .containerLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5vh;
+    }
+    .containerDireito{
+
+        display: flex;
+        flex-direction: column;
+        margin-top: -15vh;
+        gap: 5vh;
+    
+    }
+    .containerMain{
+        gap: 10vh;
+    }
+    input {
+       width: 100%;
+    }
+    /* adicione outras regras CSS aqui conforme necessário */
+ }
+
+ @media only screen and (max-width: 1110px) {
+    .containerLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5vh;
+    }
+    .containerDireito{
+
+        display: flex;
+        flex-direction: column;
+        margin-top: -15vh;
+        gap: 5vh;
+    
+    }
+    .containerMain{
+        gap: 2vh;
+    }
+    input {
+       width: 100%;
+    }
+    /* adicione outras regras CSS aqui conforme necessário */
+ }
+
+ @media only screen and (max-width: 1050px) {
+    .containerLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5vh;
+    }
+    .containerDireito{
+
+        display: flex;
+        flex-direction: column;
+        margin-top: -15vh;
+        gap: 5vh;
+    
+    }
+    .containerMain{
+        gap: 20vh;
+        flex-direction: column;
+        height: 105vh;
+    }
+
+    .container{
+        height: 110vh;
+    }
+    input {
+       width: 110%;
+    }
+    main{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    /* adicione outras regras CSS aqui conforme necessário */
+ }
+
+ @media only screen and (max-width: 530px) {
+    .containerLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5vh;
+    }
+    .containerDireito{
+
+        display: flex;
+        flex-direction: column;
+        margin-top: -15vh;
+        gap: 5vh;
+    
+    }
+    .containerMain{
+        gap: 20vh;
+        flex-direction: column;
+        height: 105vh;
+    }
+
+    .container{
+        height: 110vh;
+    }
+    input {
+       width: 100%;
+    }
+    main{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        
+    }
+    label{
+        font-size: 14px;
+    }
+    /* adicione outras regras CSS aqui conforme necessário */
+ }
+ 
