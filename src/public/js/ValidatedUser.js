@@ -52,18 +52,24 @@ async function signIn(){
       const result = await response.json();
       const user = result;
 
+      const authUser = await fetch(`http://localhost:3000/session?email=${email}&password=${password}`);
+
+      // Pega o resultado da requisição e salva na variável result em formato json
+      const resultAuth = await authUser.json();
+
 
       if (user == undefined) {
 
         setError("email", "email not found");
 
       } 
-      else if (user.password != password) {
+
+      if (resultAuth === false) {
         console.log(user.password, password);
         setError("password", "Incorrect password");
 
-      } 
-      else if (user.email === email && user.password === password) {
+      }
+      else if (user.email === email && resultAuth === true) {
 
         console.log("teste");
 
