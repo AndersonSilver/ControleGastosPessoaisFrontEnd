@@ -11,9 +11,10 @@
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    border-radius: 5vh;
+    border-radius: 2vh;
     position: static;
     min-height: 600px;
+    min-width: 300px;
 
 }
 
@@ -28,7 +29,7 @@
     background-color: #e7eaee;
     width: 90%;
     height: 80%;
-    border-radius: 10vh;
+    border-radius: 5vh;
     
 }
 .containerMain .containerLeft label{
@@ -51,7 +52,7 @@
 
     display: flex;
     flex-direction: column;
-    margin-top: -25vh;
+    margin-top: -5vh;
     gap: 5vh;
 
 }
@@ -66,11 +67,26 @@ input {
     font-size: 16px;
   }
 
-  label{
+label{
     font-size: 16px;
     font-weight: 600;
     color: #000000;
   }
+
+.btn{
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 15vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
   
   @media only screen and (max-width: 1600px) {
     .containerLeft {
@@ -83,7 +99,7 @@ input {
 
         display: flex;
         flex-direction: column;
-        margin-top: -19vh;
+        margin-top: 5vh;
         gap: 5vh;
     
     }
@@ -104,7 +120,7 @@ input {
 
         display: flex;
         flex-direction: column;
-        margin-top: -15vh;
+        margin-top: 5vh;
         gap: 5vh;
     
     }
@@ -128,7 +144,7 @@ input {
 
         display: flex;
         flex-direction: column;
-        margin-top: -15vh;
+        margin-top: 5vh;
         gap: 5vh;
     
     }
@@ -152,18 +168,17 @@ input {
 
         display: flex;
         flex-direction: column;
-        margin-top: -15vh;
+        margin-top: 5vh;
         gap: 5vh;
     
     }
     .containerMain{
-        gap: 20vh;
         flex-direction: column;
-        height: 105vh;
+        height: 125vh;
     }
 
     .container{
-        height: 110vh;
+        height: 130vh;
     }
     input {
        width: 110%;
@@ -186,18 +201,17 @@ input {
 
         display: flex;
         flex-direction: column;
-        margin-top: -15vh;
+        margin-top: 5vh;
         gap: 5vh;
     
     }
     .containerMain{
-        gap: 20vh;
         flex-direction: column;
-        height: 105vh;
+        height: 125vh;
     }
 
     .container{
-        height: 110vh;
+        height: 130vh;
     }
     input {
        width: 100%;
@@ -212,4 +226,45 @@ input {
     }
     /* adicione outras regras CSS aqui conforme necessário */
  }
+ @media only screen and (max-width: 460px) {
+    .containerLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.2vh;
+        
+    }
+    .containerDireito{
+
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+        gap: 5vh;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+    .containerMain{
+        flex-direction: column;
+        height: 125vh;
+    }
+
+    .container{
+        height: 130vh;
+    }
+    input {
+       width: 100%;
+    }
+    main{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        
+    }
+    label{
+        font-size: 12px;
+    }
+
+ }
+
+
+ 
  
