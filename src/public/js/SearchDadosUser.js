@@ -1,7 +1,8 @@
 
 async function dadosLogin() {
  
-    console.log("teste");
+
+console.log("dadosLogin");
 }
 
 
