@@ -54,11 +54,7 @@ async function signIn(){
       
       // Faz a requisição para o backend e salva na variável response
 
-      const response = await fetch(`http://localhost:3000/searchUser?email=${email}`, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      });
+      const response = await fetch(`http://localhost:3000/searchUser?email=${email}`);
 
       // Pega o resultado da requisição e salva na variável result em formato json
       const result = await response.json();
