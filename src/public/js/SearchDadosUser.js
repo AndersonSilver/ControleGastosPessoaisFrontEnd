@@ -1,9 +1,17 @@
 
-async function dadosLogin() {
+async function dadosLogin(token) {
 
-    const response = await fetch(`http://localhost:3000/searchDadosPessoais?email=teste@teste.com`);
-    const result = await response.json();
-    const dados = result;
-    console.log(dados);
+//   const response = await fetch(`http://localhost:3000/searchUser`, {
+//     headers: {
+//       Authorization: `Bearer ${token}`
+//     }
+//   });
+
+//   const result = await response.json();
+
+//   return result;
+
 }
+
+export default dadosLogin;
 

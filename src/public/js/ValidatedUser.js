@@ -1,3 +1,4 @@
+
 async function signIn(){
   
   const email = document.getElementById("emailLogin").value;
@@ -44,19 +45,24 @@ async function signIn(){
     return;
   } else {
     try {
-      
-      // Faz a requisição para o backend e salva na variável response
-      const response = await fetch(`http://localhost:3000/searchUser?email=${email}`);
-
-      // Pega o resultado da requisição e salva na variável result em formato json
-      const result = await response.json();
-      const user = result;
 
       const authUser = await fetch(`http://localhost:3000/session?email=${email}&password=${password}`);
 
       // Pega o resultado da requisição e salva na variável result em formato json
       const resultAuth = await authUser.json();
+      const token = resultAuth.token;
+      
+      // Faz a requisição para o backend e salva na variável response
 
+      const response = await fetch(`http://localhost:3000/searchUser?email=${email}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+
+      // Pega o resultado da requisição e salva na variável result em formato json
+      const result = await response.json();
+      const user = result;
 
       if (user == undefined) {
 
@@ -64,12 +70,12 @@ async function signIn(){
 
       } 
 
-      if (resultAuth === false) {
+      if (resultAuth.auth === false) {
         console.log(user.password, password);
         setError("password", "Incorrect password");
 
       }
-      else if (user.email === email && resultAuth === true) {
+      else if (user.email === email && resultAuth.auth === true) {
 
         console.log("teste");
 
@@ -79,11 +85,12 @@ async function signIn(){
         }
 
         setTimeout(function () {
-          window.location.href = `/initial/${user.id}?name=${user.name}`;
+          window.location.href = `/initial/${user.id}?name=${user.name}?email=${user.email}`;
         }, 1000);
       } else {
         console.log("nao passou");
       }
+      
     } catch (error) {
       console.log(error);
     }
