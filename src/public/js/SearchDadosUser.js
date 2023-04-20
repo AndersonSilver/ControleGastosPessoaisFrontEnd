@@ -1,3 +1,5 @@
+dadosLogin();
+
 async function dadosLogin() {
     const token = localStorage.getItem('resulttoken');
     const id = localStorage.getItem('resultid');
@@ -12,8 +14,11 @@ async function dadosLogin() {
     });
     const dados = await response.json();
 
+    if (dados === null) {
+      console.log('Não foi possível carregar os dados');
+    }
 
-    document.getElementById('NameComplet').value = dados.nomeCompleto;
+    document.getElementById('NameComplet').value = dados.nameCompleto;
 
     document.getElementById('SerChamado').value = nomeChamado;
     document.getElementById('email').value = email;
@@ -25,15 +30,10 @@ async function dadosLogin() {
     document.getElementById('dataNascimento').value = dados.aniversario;
     document.getElementById('sexo').value = dados.sexo;
     document.getElementById('cpf').value = dados.cpf;
-    // document.getElementById('objetivoFinanceiro').value = dados.objetivoFinanceiro;
-
-    
-    
-    
-
+    document.getElementById('objetivoFinanceiro').value = dados.objetivoFinanceiro;
 
     console.log(dados);
     return dados;
   }
   
-    dadosLogin();
+    
