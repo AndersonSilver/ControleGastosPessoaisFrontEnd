@@ -48,12 +48,40 @@ async function signIn(){
 
       const authUser = await fetch(`http://localhost:3000/session?email=${email}&password=${password}`);
 
+      if (authUser.status === 404) {
+        setError("email", "Email not found");
+      }
+
+      if (authUser.status === 401) {
+        setError("password", "Incorrect password");
+      }
+
+      if (authUser.status === 500) {
+        setError("password", "Internal server error");
+      }
+
+      if (authUser.status === 400) {
+        setError("email", "Email not found");
+      }
+
+      if (authUser === undefined) {
+        setError("email", "Email not found");
+      }
+
       // Pega o resultado da requisição e salva na variável result em formato json
       const resultAuth = await authUser.json();
       const token = resultAuth.token;
-      
-      // Faz a requisição para o backend e salva na variável response
+      const id = resultAuth.getEmail.id;
+      const name = resultAuth.getEmail.name;
+      const ResultEmail = resultAuth.getEmail.email;
 
+      localStorage.setItem('resulttoken', token);
+      localStorage.setItem('resultid', id);
+      localStorage.setItem('name', name);
+      localStorage.setItem('ResultEmail', ResultEmail);
+
+      // Faz a requisição para o backend e salva na variável response
+      // console.log(resultAuth);
       const response = await fetch(`http://localhost:3000/searchUser?email=${email}`, {
         headers: {
           Authorization: `Bearer ${token}`
