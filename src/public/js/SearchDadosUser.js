@@ -32,7 +32,6 @@ async function dadosLogin() {
     document.getElementById('cpf').value = dados.cpf;
     document.getElementById('objetivoFinanceiro').value = dados.objetivoFinanceiro;
 
-    console.log(dados);
     return dados;
   }
   

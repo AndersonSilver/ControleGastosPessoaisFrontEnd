@@ -1,6 +1,14 @@
 <main>
+  
   <form>
+    
     <div class="container">
+      <div class="buttonMeusDados">
+        <button class="btnMeusDados">Meus Dados</button>
+        <button class="btnMeusDados">Profissional</button>
+        <button class="btnMeusDados">Financeiro</button>
+      </div>
+      
       <div class="containerMain">
         <!-- <h3>Meus Dados</h3> -->
         <div class="containerLeft">
@@ -11,12 +19,12 @@
 
           <div class="box">
             <label for="">Como Você Gostaria de ser chamado ?</label>
-            <input type="text" name="SerChamado" id="SerChamado" />
+            <input type="text" name="SerChamado" id="SerChamado" readonly/>
           </div>
 
           <div class="box">
             <label for="">Email: </label>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" readonly/>
           </div>
 
           <div class="box">
@@ -72,11 +80,12 @@
             </select>
           </div>
           <div class="btnFund">
-            <button class="btn" type="submit" name="submit">Salvar informações</button>
+            <button class="btn" type="submit" name="submit" onclick="UpdateDadosUser()">Salvar informações</button>
           </div>
         </div>
       </div>
     </div>
   </form>
   <script src="/js/SearchDadosUser.js"></script>
+  <script src="/js/UpdateDadosUser.js"></script>
 </main>
