@@ -11,6 +11,19 @@ class SessionController {
     async meuperfil(req,res){
         res.render('ConfiguracoesPerfilUsuario');
     }
+
+    async meusDados(req,res){
+        res.render('/partials/FormularioCadastroPerfil');
+    }
+
+    async cadastroProfissonal(req,res){
+        res.render('ConfiguracoesPerfilUsuarioProfissional');
+    }
+
+    async cadastroFinanceiro(req,res){
+        res.render('ConfiguracoesPerfilUsuarioFinanceiro');
+    }
+
 }
 
 export default new SessionController();

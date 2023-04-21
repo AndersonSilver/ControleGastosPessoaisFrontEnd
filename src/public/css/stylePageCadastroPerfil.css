@@ -4,12 +4,23 @@
     box-sizing: border-box;
 }
 
-.btnMeusDados .buttonMeusDados{
+.buttonMeusDados{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    gap: 1vh;
 }
+
+.btnMeusDados {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    width: 2vh;
+}
+
+.buttonMeusDados a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .container{
     width: 100%;
@@ -23,7 +34,7 @@
     min-height: 600px;
     min-width: 300px;
     flex-direction: column;
-    gap: 5vh;
+    /* gap: 5vh; */
 }
 
 .containerMain{
@@ -46,6 +57,12 @@
     background-color: transparent;
     
 }
+.containerMain .containerDireito label{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    
+}
 
 .containerLeft{
 
@@ -60,7 +77,7 @@
 
     display: flex;
     flex-direction: column;
-    margin-top: -5vh;
+    margin-top: 2vh;
     gap: 5vh;
 
 }
@@ -82,6 +99,20 @@ label{
   }
 
 .btn{
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 15vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.btnMeusDados{
     background-color: #1e90ff;
     color: #ffffff;
     border: none;
@@ -157,7 +188,7 @@ label{
     
     }
     .containerMain{
-        gap: 2vh;
+        gap: 8vh;
     }
     input {
        width: 100%;
@@ -176,13 +207,18 @@ label{
 
         display: flex;
         flex-direction: column;
-        margin-top: 5vh;
+        margin-top: -5vh;
         gap: 5vh;
+        margin-left: -11vh;
     
     }
     .containerMain{
         flex-direction: column;
-        height: 125vh;
+        height: 180vh;
+        padding: 8vh;
+    }
+    .containerDireito input{
+        width: 180%;
     }
 
     .container{
