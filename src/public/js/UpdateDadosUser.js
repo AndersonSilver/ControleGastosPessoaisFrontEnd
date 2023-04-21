@@ -4,7 +4,7 @@ async function UpdateDadosUser(){
     const token = localStorage.getItem('resulttoken');
     const id = localStorage.getItem('resultid');
 
-    const nameCompleto = document.getElementById('NameComplet').value;     
+    const nameCompleto = document.getElementById('NomeCompleto').value;     
     const telefone = document.getElementById('telefone').value;         
     const cep = document.getElementById('cep').value;               
     const estado = document.getElementById('estado').value;             
@@ -43,10 +43,5 @@ async function UpdateDadosUser(){
     if (dados === null) {
         console.log('Não foi possível carregar os dados');
     }
-
-
-
     console.log(dados);
-
-    
 }

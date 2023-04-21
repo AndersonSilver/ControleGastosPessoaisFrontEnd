@@ -24,6 +24,8 @@ async function dadosLogin() {
     const dadosProfissionalFinal = dadosProfissional[0];
 
     const dados = await response.json();
+    console.log(dados);
+    console.log(dadosProfissionalFinal);
 
     if (dadosProfissional === null) {
       console.log('Não foi possível carregar os dados');
@@ -32,36 +34,126 @@ async function dadosLogin() {
     if (dados === null) {
       console.log('Não foi possível carregar os dados');
     }
+
     
-    console.log(dados);
-    console.log(dadosProfissionalFinal);
     // Esse dados abaixo e para o formulário de cadastro de dados pessoais
 
-    document.getElementById('NameComplet').value = dados.nameCompleto;
-    document.getElementById('SerChamado').value = nomeChamado;
-    document.getElementById('email').value = email;
-    document.getElementById('telefone').value = dados.telefone;
-    document.getElementById('cep').value = dados.cep;
-    document.getElementById('estado').value = dados.estado;
-    document.getElementById('cidade').value = dados.cidade;
-    document.getElementById('dataNascimento').value = dados.aniversario;
-    document.getElementById('sexo').value = dados.sexo;
-    document.getElementById('cpf').value = dados.cpf;
-    document.getElementById('objetivoFinanceiro').value = dados.objetivoFinanceiro;
+    const nameCompletoElement = document.getElementById('NomeCompleto');
+
+    if (nameCompletoElement !== null) {
+      nameCompletoElement.value = dados.nameCompleto;
+    }
+
+    const SerChamadoElement = document.getElementById('SerChamado');
+
+    if (SerChamadoElement !== null) {
+      SerChamadoElement.value = nomeChamado;
+    }
+
+    const emailElement = document.getElementById('email');
+
+    if (emailElement !== null) {
+      emailElement.value = email;
+    }
+
+    const telefoneElement = document.getElementById('telefone');
+
+    if (telefoneElement !== null) {
+      telefoneElement.value = dados.telefone;
+    }
+
+    const cepElement = document.getElementById('cep');
+
+    if (cepElement !== null) {
+      cepElement.value = dados.cep;
+    }
+
+    const estadoElement = document.getElementById('estado');
+
+    if (estadoElement !== null) {
+      estadoElement.value = dados.estado;
+    }
+
+    const cidadeElement = document.getElementById('cidade');
+
+    if (cidadeElement !== null) {
+      cidadeElement.value = dados.cidade;
+    }
+
+    const dataNascimentoElement = document.getElementById('dataNascimento');
+
+    if (dataNascimentoElement !== null) {
+      dataNascimentoElement.value = dados.aniversario;
+    }
+
+    const sexoElement = document.getElementById('sexo');
+
+    if (sexoElement !== null) {
+      sexoElement.value = dados.sexo;
+    }
+
+    const cpfElement = document.getElementById('cpf');
+
+    if (cpfElement !== null) {
+      cpfElement.value = dados.cpf;
+    }
+
+    const objetivoFinanceiroElement = document.getElementById('objetivoFinanceiro');
+
+    if (objetivoFinanceiroElement !== null) {
+      objetivoFinanceiroElement.value = dados.objetivoFinanceiro;
+    }
 
     // Esse dados abaixo e para o formulário de cadastro de dados profissionais
 
-    document.getElementById('Escolaridade').value = dadosProfissionalFinal.escolaridade;
-    document.getElementById('Profissao').value = dadosProfissionalFinal.profissao;
-    document.getElementById('Empresa').value = dadosProfissionalFinal.empresa;
-    document.getElementById('atividadeDesempenhada').value = dadosProfissionalFinal.atividadeDesempenhada;
-    document.getElementById('emailComercial').value = dadosProfissionalFinal.emailComercial;
-    document.getElementById('fonteDeRenda').value = dadosProfissionalFinal.fonteDeRenda;
-    document.getElementById('rendaMensal').value = dadosProfissionalFinal.rendaMensal;
-    document.getElementById('telefoneComercial').value = dadosProfissionalFinal.telefoneComercial;
-    
+    const EscolaridadeElement = document.getElementById('Escolaridade');
 
-    return dados;
+    if (EscolaridadeElement !== null) {
+      EscolaridadeElement.value = dadosProfissionalFinal.escolaridade;
+    }
+
+    const ProfissaoElement = document.getElementById('Profissao');
+
+    if (ProfissaoElement !== null) {
+      ProfissaoElement.value = dadosProfissionalFinal.profissao;
+    }
+
+    const EmpresaElement = document.getElementById('Empresa');
+
+    if (EmpresaElement !== null) {
+      EmpresaElement.value = dadosProfissionalFinal.empresaAtual;
+    }
+
+    const AtividadeDesempenhadaElement = document.getElementById('atividadeDesempenhada');
+
+    if (AtividadeDesempenhadaElement !== null) {
+      AtividadeDesempenhadaElement.value = dadosProfissionalFinal.atividadeDesenvolvida;
+    }
+
+    const EmailComercialElement = document.getElementById('emailComercial');
+
+    if (EmailComercialElement !== null) {
+      EmailComercialElement.value = dadosProfissionalFinal.emailComercial;
+    }
+
+    const FonteDeRendaElement = document.getElementById('fonteDeRenda');
+
+    if (FonteDeRendaElement !== null) {
+      FonteDeRendaElement.value = dadosProfissionalFinal.fonteRenda;
+    }
+
+    const RendaMensalElement = document.getElementById('rendaMensal');
+
+    if (RendaMensalElement !== null) {
+      RendaMensalElement.value = dadosProfissionalFinal.rendaMensal;
+    }
+
+    const TelefoneComercialElement = document.getElementById('telefoneComercial');
+
+    if (TelefoneComercialElement !== null) {
+      TelefoneComercialElement.value = dadosProfissionalFinal.telefoneComercial;
+    }
+
+    return dados,dadosProfissionalFinal;
   }
   
-    
