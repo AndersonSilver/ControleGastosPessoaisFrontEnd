@@ -25,7 +25,7 @@ async function UpdateDadosUserProfissional(){
         telefoneComercial
     }
     
-        const response = await fetch(`http://localhost:3000/createProfissional?id=${id}`, {
+        const response = await fetch(`http://localhost:3000/createProfissional/${id}`, {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${token}`,
