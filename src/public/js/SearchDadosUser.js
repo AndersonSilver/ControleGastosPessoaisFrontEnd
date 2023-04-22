@@ -49,6 +49,12 @@ async function dadosLogin() {
       SerChamadoElement.value = nomeChamado;
     }
 
+    const SerChamadoPerfilElement = document.getElementById('SerChamadoPerfil');
+
+    if (SerChamadoPerfilElement !== null) {
+      SerChamadoPerfilElement.value = nomeChamado;
+    }
+
     const emailElement = document.getElementById('email');
 
     if (emailElement !== null) {

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .buttonMeusDados{
@@ -14,6 +15,8 @@
     justify-content: center;
     text-decoration: none;
     width: 2vh;
+    margin: 5px;
+
 }
 
 .buttonMeusDados a {
@@ -24,7 +27,7 @@
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: 110%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,25 +35,28 @@
     border-radius: 2vh;
     position: static;
     min-height: 600px;
-    min-width: 300px;
+    min-width: 500px;
     flex-direction: column;
     /* gap: 5vh; */
 }
 
 .containerMain{
 
-    gap: 25vh;
+    gap: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: transparent;
     align-items: center;
     background-color: transparent;
     background-color: #e7eaee;
     width: 90%;
     height: 80%;
     border-radius: 5vh;
-    
+    padding: 25px;
+    min-width: 500px;
 }
+
 .containerMain .containerLeft label{
     display: flex;
     flex-direction: column;
@@ -63,6 +69,7 @@
     background-color: transparent;
     
 }
+
 
 .containerLeft{
 
@@ -83,19 +90,22 @@
 }
 
 input {
+    position: relative;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #c8cacd;
-    outline: none;
-    width: 40vh;
+    width: 70vh;
     padding: 5px;
     font-size: 16px;
   }
+  input:focus {
+    outline: none;
+  }
 
 label{
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 600;
-    color: #000000;
+    color: #837f7f;
   }
 
 .btn{
@@ -133,6 +143,7 @@ label{
         flex-direction: column;
         justify-content: center;
         gap: 1vh;
+        width: 80vh;
     }
     .containerDireito{
 
@@ -140,12 +151,12 @@ label{
         flex-direction: column;
         margin-top: 5vh;
         gap: 5vh;
+        width: 80vh;
     
     }
     input {
        width: 100%;
     }
-    /* adicione outras regras CSS aqui conforme necessário */
  }
 
  @media only screen and (max-width: 1360px) {
@@ -153,7 +164,7 @@ label{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 0.5vh;
+        gap: 1vh;
     }
     .containerDireito{
 
@@ -164,12 +175,11 @@ label{
     
     }
     .containerMain{
-        gap: 10vh;
+        gap: 5vh;
     }
     input {
        width: 100%;
     }
-    /* adicione outras regras CSS aqui conforme necessário */
  }
 
  @media only screen and (max-width: 1110px) {
@@ -177,7 +187,7 @@ label{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 0.5vh;
+        gap: 1vh;
     }
     .containerDireito{
 
@@ -188,125 +198,25 @@ label{
     
     }
     .containerMain{
-        gap: 8vh;
+        gap: 5vh;
     }
     input {
        width: 100%;
     }
-    /* adicione outras regras CSS aqui conforme necessário */
  }
 
- @media only screen and (max-width: 1050px) {
-    .containerLeft {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.5vh;
-    }
-    .containerDireito{
-
-        display: flex;
-        flex-direction: column;
-        margin-top: -5vh;
-        gap: 5vh;
-        margin-left: -11vh;
-    
-    }
+ @media only screen and (max-width: 850px) {
     .containerMain{
-        flex-direction: column;
-        height: 180vh;
-        padding: 8vh;
+        display: flex;        
     }
-    .containerDireito input{
-        width: 180%;
+    input{
+        width: 100%;
     }
 
-    .container{
-        height: 130vh;
-    }
-    input {
-       width: 110%;
-    }
-    main{
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-    }
-    /* adicione outras regras CSS aqui conforme necessário */
  }
 
  @media only screen and (max-width: 530px) {
-    .containerLeft {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.5vh;
-    }
-    .containerDireito{
-
-        display: flex;
-        flex-direction: column;
-        margin-top: 5vh;
-        gap: 5vh;
     
-    }
-    .containerMain{
-        flex-direction: column;
-        height: 125vh;
-    }
-
-    .container{
-        height: 130vh;
-    }
-    input {
-       width: 100%;
-    }
-    main{
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        
-    }
-    label{
-        font-size: 14px;
-    }
-    /* adicione outras regras CSS aqui conforme necessário */
- }
- @media only screen and (max-width: 460px) {
-    .containerLeft {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.2vh;
-        
-    }
-    .containerDireito{
-
-        display: flex;
-        flex-direction: column;
-        margin-top: 5vh;
-        gap: 5vh;
-        margin-left: 5vh;
-        margin-right: 5vh;
-    }
-    .containerMain{
-        flex-direction: column;
-        height: 125vh;
-    }
-
-    .container{
-        height: 130vh;
-    }
-    input {
-       width: 100%;
-    }
-    main{
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        
-    }
-    label{
-        font-size: 12px;
-    }
-
  }
 
 
