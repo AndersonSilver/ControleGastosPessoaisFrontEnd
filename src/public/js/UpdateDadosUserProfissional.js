@@ -25,7 +25,7 @@ async function UpdateDadosUserProfissional(){
         telefoneComercial
     }
     
-        const response = await fetch(`http://localhost:3000/createProfissional/${id}`, {
+        const response = await fetch(`http://localhost:3000/createProfissional/?id=${id}`, {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${token}`,
@@ -35,12 +35,8 @@ async function UpdateDadosUserProfissional(){
     });
 
     const dados = await response.json();
-    console.log(dados);
 
     if (dados === null) {
         console.log('Não foi possível carregar os dados');
     }
-
-    console.log(dados);
- 
 }

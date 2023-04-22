@@ -24,8 +24,7 @@ async function dadosLogin() {
     const dadosProfissionalFinal = dadosProfissional[0];
 
     const dados = await response.json();
-    console.log(dados);
-    console.log(dadosProfissionalFinal);
+
 
     if (dadosProfissional === null) {
       console.log('Não foi possível carregar os dados');

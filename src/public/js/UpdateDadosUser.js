@@ -34,14 +34,13 @@ async function UpdateDadosUser(){
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
+        
         body: JSON.stringify(data)
     });
 
     const dados = await response.json();
-    console.log(dados);
 
     if (dados === null) {
         console.log('Não foi possível carregar os dados');
     }
-    console.log(dados);
 }
