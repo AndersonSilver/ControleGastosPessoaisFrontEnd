@@ -24,6 +24,10 @@ class SessionController {
         res.render('ConfiguracoesPerfilUsuarioFinanceiro');
     }
 
+    async dashboard(req,res){
+        res.render('initial');
+    }
+
 }
 
 export default new SessionController();

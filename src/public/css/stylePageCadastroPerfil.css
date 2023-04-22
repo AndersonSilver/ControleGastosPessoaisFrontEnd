@@ -161,7 +161,7 @@ label{
 }
 
   
-  @media only screen and (max-width: 1600px) {
+  @media only screen and (max-width: 2000px) {
     .containerLeft {
         display: flex;
         flex-direction: column;
