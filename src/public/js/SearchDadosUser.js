@@ -20,11 +20,24 @@ async function dadosLogin() {
       }
     });
 
+    const responseFinanceiro = await fetch(`http://localhost:3000/searchFinanceiro?id=${id}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
     const dadosProfissional = await responseProfissional.json();
     const dadosProfissionalFinal = dadosProfissional[0];
+    const dadosFinanceiro = await responseFinanceiro.json();
+    const dadosFinanceiroFinal = dadosFinanceiro[0];
+    console.log(dadosFinanceiroFinal)
 
     const dados = await response.json();
 
+    if(dadosFinanceiroFinal === null){
+      console.log('Nao foi possivel carregar os dados');
+    }
 
     if (dadosProfissional === null) {
       console.log('Não foi possível carregar os dados');
@@ -159,6 +172,46 @@ async function dadosLogin() {
       TelefoneComercialElement.value = dadosProfissionalFinal.telefoneComercial;
     }
 
-    return dados,dadosProfissionalFinal;
+    // Esses dados abaixo e para o formulário de cadastro de dados financeiros
+
+  const tipoMoradiaElement = document.getElementById('tipoMoradia');
+
+  if (tipoMoradiaElement !== null) {
+    tipoMoradiaElement.value = dadosFinanceiroFinal.tipoMoradia;
+  }
+
+  const qtdPessoasElement = document.getElementById('qtdPessoas');
+
+  if (qtdPessoasElement !== null) {
+    qtdPessoasElement.value = dadosFinanceiroFinal.qtdPessoas;
+  }
+
+  const qtdCartaoCreditoElement = document.getElementById('qtdCartaoCredito');
+
+  if (qtdCartaoCreditoElement !== null) {
+    qtdCartaoCreditoElement.value = dadosFinanceiroFinal.qtdCartaoCredito;
+  }
+
+  const valorPatrimonioElement = document.getElementById('valorPatrimonio');
+
+  if (valorPatrimonioElement !== null) {
+    valorPatrimonioElement.value = dadosFinanceiroFinal.valorPatrimonio;
+  }
+
+  const possuiVeiculoElement = document.getElementById('possuiVeiculo');
+
+  if (possuiVeiculoElement !== null) {
+    possuiVeiculoElement.value = dadosFinanceiroFinal.possuiVeiculo;
+  }
+
+  const tipoVeiculoElement = document.getElementById('tipoVeiculo');
+
+  if (tipoVeiculoElement !== null) {
+    tipoVeiculoElement.value = dadosFinanceiroFinal.tipoVeiculo;
+  }
+
+  
+
+    return dados,dadosProfissionalFinal,dadosFinanceiroFinal;
   }
   

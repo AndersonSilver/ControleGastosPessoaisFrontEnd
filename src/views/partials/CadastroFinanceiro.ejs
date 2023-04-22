@@ -6,12 +6,17 @@
       <!-- MAIN -->
       <div class="containerMain">
         <!-- MAIN -->
-
+        <%- include ('FormularioCadastroFinanceiro.ejs'); -%>
         <!-- MAIN -->
+      </div>
+      <div class="btnFund">
+        <button class="btn" id="btn_perfil" type="submit" name="submit" onclick="UpdateDadosUserFinanceiro()">
+          Salvar
+        </button>
       </div>
     </div>
   </form>
 
   <script src="/js/SearchDadosUser.js"></script>
-  <script src="/js/UpdateDadosUser.js"></script>
+  <script src="/js/UpdateDadosUserFinanceiro.js"></script>
 </main>

@@ -1,71 +1,57 @@
 <div class="containerLeft">
-  <div class="box">
-    <label for="">Nome Completo</label>
-    <input type="text" name="NameComplet" id="NameComplet" />
-  </div>
 
   <div class="box">
-    <label for="">Como Você Gostaria de ser chamado ?</label>
-    <input type="text" name="SerChamado" id="SerChamado" readonly />
-  </div>
-
-  <div class="box">
-    <label for="">Email: </label>
-    <input type="email" name="email" id="email" readonly />
-  </div>
-
-  <div class="box">
-    <label for="">Telefone: </label>
-    <input type="text" name="telefone" id="telefone" />
-  </div>
-
-  <div class="box">
-    <label for="">Cep: </label>
-    <input type="text" name="cep" id="cep" />
-  </div>
-
-  <div class="box">
-    <label for="">Estado: </label>
-    <input type="text" name="estado" id="estado" />
-  </div>
-
-  <div class="box">
-    <label for="">Cidade: </label>
-    <input type="text" name="cidade" id="cidade" />
-  </div>
-</div>
-<div class="containerDireito">
-  <div class="box">
-    <label for="">Data de Aniversario: </label>
-    <input type="date" name="dataNascimento" id="dataNascimento" />
-  </div>
-
-  <div class="box">
-    <label for="">Sexo: </label>
-    <select name="sexo" id="sexo">
-      <option value="Masculino">Masculino</option>
-      <option value="Feminino">Feminino</option>
-    </select>
-  </div>
-
-  <div class="box">
-    <label for="">CPF: </label>
-    <input type="text" name="cpf" id="cpf" />
-  </div>
-  <div class="box">
-    <label for="">Objetivo Financeiro: </label>
-    <select name="objetivoFinanceiro" id="objetivoFinanceiro">
-      <option value="Aposentadoria">Aposentadoria</option>
-      <option value="Comprar Carro">Comprar Carro</option>
-      <option value="Comprar Casa">Comprar Casa</option>
-      <option value="Comprar Moto">Comprar Moto</option>
-      <option value="Comprar Outro Bem">Comprar Outro Bem</option>
-      <option value="Comprar Viagem">Comprar Viagem</option>
-      <option value="Construir Patrimonio">Construir Patrimonio</option>
+    <label for="">Qual o seu tipo de moradia? </label>
+    <select name="tipoMoradia" id="tipoMoradia">
+      <option value="Apartamento Proprio">Apartamento Próprio</option>
+      <option value="Apartamento Alugado">Apartamento Alugado</option>
+      <option value="Casa Proria">Casa Prória</option>
+      <option value="Casa Alugada">Casa Alugada</option>
       <option value="Outro">Outro</option>
     </select>
   </div>
-  <div class="btnFund">
-    <button class="btn" type="submit" name="submit" onclick="UpdateDadosUser()">Salvar informações</button>
+
+  <div class="box">
+    <label for="">Quantas pessoas moram com você? </label>
+    <input type="text" name="qtdPessoas" id="qtdPessoas" />
+  </div>
+
+  <div class="box">
+    <label for="">Quantos cartões de créditos voce possui?</label>
+    <input type="text" name="qtdCartaoCredito" id="qtdCartaoCredito"/>
+  </div>
+</div>
+<div class="containerDireito">
+
+  <div class="box ">
+    <label for="">Qual o valor do seu patrimônio atual? </label>
+    <select name="valorPatrimonio" id="valorPatrimonio">
+      <option value="Até R$ 1 mil">Até R$ 1 mil</option>
+      <option value="De R$ 1 mil até R$ 5 mil">De R$ 1 mil até R$ 5 mil</option>
+      <option value="De R$ 5 mil até R$ 10 mil">De R$ 5 mil até R$ 10 mil</option>
+      <option value="De R$ 10 mil até R$ 30 mil">De R$ 10 mil até R$ 30 mil</option>
+      <option value="De R$ 30 mil até R$ 60 mil">De R$ 30 mil até R$ 60 mil</option>
+      <option value="De R$ 60 mil até R$ 100 mil">De R$ 60 mil até R$ 100 mil</option>
+      <option value="De R$ 100 mil a R$ 300 mil">De R$ 100 mil a R$ 300 mil</option>
+      <option value="De R$ 300 mil a R$ 1 milhão">De R$ 300 mil a R$ 1 milhão</option>
+      <option value="Acima de R$ 1 milhão">Acima de R$ 1 milhão</option>
+    </select>
+  </div>
+
+  <div class="box">
+    <label for="">Possui veículo? </label>
+    <select name="possuiVeiculo" id="possuiVeiculo">
+      <option value="Sim">Sim</option>
+      <option value="Nao">Nao</option>
+    </select>
+  </div>
+
+  <div class="box">
+    <label for="">Qual o seu tipo de veículo? </label>
+    <select name="tipoVeiculo" id="tipoVeiculo">
+      <option value="Carro">Carro</option>
+      <option value="Moto">Moto</option>
+      <option value="Carro e Moto">Carro e Moto</option>
+    </select>
   </div>
 </div>

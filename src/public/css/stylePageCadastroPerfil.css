@@ -89,6 +89,30 @@
 
 }
 
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23353c4a' d='M15.39 7.44L10 12.83 4.61 7.44a.75.75 0 00-1.06 1.06l6.5 6.5a.75.75 0 001.06 0l6.5-6.5a.75.75 0 000-1.06h-.01a.76.76 0 00-1.06-.01z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px 16px;
+    background-color: transparent; /* adiciona fundo transparente */
+  }
+  
+  select:hover, select:focus {
+    border-color: #666;
+  }
+  
+  select option {
+    color: #333;
+    background-color: #f5f5f5;
+  }
+
 input {
     position: relative;
     background-color: transparent;
