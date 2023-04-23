@@ -28,6 +28,18 @@ class SessionController {
         res.render('initial');
     }
 
+    async receitas(req,res){
+        res.render('CadastroReceitas');
+    }
+
+    async despesas(req,res){
+        res.render('CadastroDespesas');
+    }
+
+    async CadastroCartaoDeCredito(req,res){
+        res.render('CadastroCartaoDeCrédito');
+    }
+
 }
 
 export default new SessionController();

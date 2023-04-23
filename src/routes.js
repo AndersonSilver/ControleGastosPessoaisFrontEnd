@@ -11,5 +11,8 @@ app.get('/meusdados', SessionController.meusDados);
 app.get('/cadastroProfissional', SessionController.cadastroProfissonal);
 app.get('/cadastroFinanceiro', SessionController.cadastroFinanceiro);
 app.get('/dashboard', SessionController.dashboard);
+app.get('/receitas', SessionController.receitas);
+app.get('/despesas', SessionController.despesas);
+app.get('/CadastroCartaoDeCredito', SessionController.CadastroCartaoDeCredito);
 
 export default app;
