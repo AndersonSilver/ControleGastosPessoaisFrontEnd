@@ -8,13 +8,13 @@
 }
 
 :root {
-	--grey: #F1F0F6;
+	--grey: rgb(28, 28, 30);
 	--dark-grey: #8D8D8D;
-	--light: #fff;
-	--dark: #000;
+	--light: #2C2C2E;
+	--dark: rgba(255, 255, 255, 0.7);;
 	--green: #81D43A;
 	--light-green: #E3FFCB;
-	--blue: #1775F1;
+	--blue: rgb(28, 28, 30);
 	--light-blue: #D0E4FF;
 	--dark-blue: #0C5FCD;
 	--red: #FC3B56;
@@ -36,11 +36,6 @@ a {
 li {
 	list-style: none;
 }
-
-
-
-
-
 
 
 /* SIDEBAR */
@@ -72,7 +67,7 @@ li {
 	align-items: center;
 	height: 64px;
 	font-weight: 700;
-	color: var(--blue);
+	color: rgb(239, 239, 239);
 	position: sticky;
 	top: 0;
 	left: 0;
@@ -115,15 +110,15 @@ li {
 	white-space: nowrap;
 }
 #sidebar .side-menu > li > a:hover {
-	background: var(--grey);
+	background: var(--dark-blue);
 }
 #sidebar .side-menu > li > a.active .icon-right {
 	transform: rotateZ(90deg);
 }
 #sidebar .side-menu > li > a.active,
 #sidebar .side-menu > li > a.active:hover {
-	background: var(--blue);
-	color: var(--light);
+	background: var(--dark-blue);
+	color: rgb(239, 239, 239);
 }
 #sidebar .divider {
 	margin-top: 24px;
@@ -173,8 +168,8 @@ li {
 	justify-content: center;
 	align-items: center;
 	padding: 12px 0;
-	color: var(--light);
-	background: var(--blue);
+	color: rgb(239, 239, 239);
+	background: var(--dark-blue);
 	transition: all .3s ease;
 	border-radius: 5px;
 	font-weight: 600;
@@ -185,7 +180,7 @@ li {
 }
 #sidebar .ads .wrapper p {
 	font-size: 12px;
-	color: var(--dark-grey);
+	color: var(--dark);
 	text-align: center;
 }
 #sidebar .ads .wrapper p span {
@@ -325,6 +320,10 @@ nav .profile .profile-link a {
 nav .profile .profile-link a:hover {
 	background: var(--grey);
 }
+
+.head h2{
+	color: var(--dark);
+}
 /* NAVBAR */
 
 
@@ -348,7 +347,7 @@ main .breadcrumbs li a {
 	font-size: 14px;
 }
 main .breadcrumbs li a {
-	color: var(--blue);
+	color: var(--dark);
 }
 main .breadcrumbs li a.active,
 main .breadcrumbs li.divider {
@@ -371,14 +370,14 @@ main .card .head {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	padding-bottom: 5vh;
+	padding-bottom: 2vh;
 	
 }
 
 main .card .money {
 	font-size: 36px;
 	font-weight: 600;
-	color: #4a4747;
+	color: #e8e5e5;
 } 
 main .card .head h2 {
 	font-size: 24px;

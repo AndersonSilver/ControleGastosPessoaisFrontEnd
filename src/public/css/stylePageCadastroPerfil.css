@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #2C2C2E;
     border-radius: 2vh;
     position: static;
     min-height: 600px;
@@ -49,7 +49,7 @@
     background-color: transparent;
     align-items: center;
     background-color: transparent;
-    background-color: #e7eaee;
+    background-color: rgb(28, 28, 30);
     width: 90%;
     height: 80%;
     border-radius: 5vh;
@@ -79,7 +79,10 @@
     gap: 2vh;
 
 }
-
+.title{
+    color:#d1d1d1;
+    font-size: 20px;
+}
 .containerDireito{
 
     display: flex;
@@ -87,6 +90,10 @@
     margin-top: 2vh;
     gap: 5vh;
 
+}
+
+.containerLeft h2{
+    color: #ffffff;
 }
 
 select {
@@ -102,11 +109,12 @@ select {
     background-position: right 8px center;
     background-size: 16px 16px;
     background-color: transparent; /* adiciona fundo transparente */
-  }
+    color: #ececec;
+}
   
-  select:hover, select:focus {
+select:hover, select:focus {
     border-color: #666;
-  }
+}
   
   select option {
     color: #333;
@@ -117,23 +125,24 @@ input {
     position: relative;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid #c8cacd;
+    border-bottom: 2px solid #8D8D8D;
     width: 70vh;
     padding: 5px;
     font-size: 16px;
+    color: #ececec;
   }
   input:focus {
     outline: none;
   }
 
 label{
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 600;
-    color: #837f7f;
+    color: #c3bcbc;
   }
 
 .btn{
-    background-color: #1e90ff;
+    background-color: #0C5FCD;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -147,7 +156,7 @@ label{
 }
 
 .btnMeusDados{
-    background-color: #1e90ff;
+    background-color: #0C5FCD;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -160,13 +169,40 @@ label{
     margin-bottom: 5vh;
 }
 
+
+/* Estilização da linha divisória */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin: 0.5rem 0;
+}
+
+.divider:before,
+.divider:after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #6c757d;
+}
+
+.divider:before {
+  margin-right: 0.5rem;
+}
+
+.divider:after {
+  margin-left: 0.5rem;
+}
+
+
   
   @media only screen and (max-width: 2000px) {
     .containerLeft {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 1vh;
+        gap: 3vh;
         width: 80vh;
     }
     .containerDireito{
@@ -178,6 +214,10 @@ label{
         width: 80vh;
     
     }
+    .containerMain{
+        padding: 5vh;
+    }
+
     input {
        width: 100%;
     }
