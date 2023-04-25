@@ -39,6 +39,35 @@ async function searchAllUsers(){
 
     const ContaCell = row.insertCell();
     ContaCell.innerText = user.conta;
+
+    const acoesCell = row.insertCell();
+    const botaoEditarAcoes = document.createElement('button'); // Cria o elemento de botão
+    const botaoDeletarAcoes = document.createElement('button');   
+
+    botaoEditarAcoes.innerText = 'Editar'; // Define o texto do botão
+    botaoEditarAcoes.classList.add('btn'); // Adiciona classes ao botão, se necessário
+    
+    // Adicione um event listener ao botão, se desejar
+    botaoEditarAcoes.addEventListener('click', () => {
+      
+      // Lógica da ação do botão aqui
+    console.log('Botão clicado!', user); // Exemplo de ação do botão, você pode substituir por sua lógica
+    });
+
+    acoesCell.appendChild(botaoEditarAcoes); // Adiciona o botão à célula da coluna "Ações"
+
+    botaoDeletarAcoes.innerText = 'Deletar'; // Define o texto do botão
+    botaoDeletarAcoes.classList.add('btn'); // Adiciona classes ao botão, se necessário
+    
+    // Adicione um event listener ao botão, se desejar
+    botaoDeletarAcoes.addEventListener('click', () => {
+      
+      // Lógica da ação do botão aqui
+    console.log('Botão clicado!', user); // Exemplo de ação do botão, você pode substituir por sua lógica
+    });
+
+    acoesCell.appendChild(botaoDeletarAcoes); // Adiciona o botão à célula da coluna "Ações"
+
     
     });
 
