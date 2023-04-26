@@ -31,7 +31,6 @@ async function dadosLogin() {
     const dadosProfissionalFinal = dadosProfissional[0];
     const dadosFinanceiro = await responseFinanceiro.json();
     const dadosFinanceiroFinal = dadosFinanceiro[0];
-    console.log(dadosFinanceiroFinal)
 
     const dados = await response.json();
 
