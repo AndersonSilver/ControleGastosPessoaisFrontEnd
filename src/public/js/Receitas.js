@@ -44,14 +44,14 @@ async function searchAllUsers(){
 
     const acoesCell = row.insertCell();
 
-    // acoesCell.style.width = "150px";
-    const botaoEditarAcoes = document.createElement('button'); // Cria o elemento de botão
+    const botaoEditarAcoes = document.createElement('button');
     const botaoDeletarAcoes = document.createElement('button');  
 
-    botaoEditarAcoes.innerText = 'Editar'; // Define o texto do botão
-    botaoEditarAcoes.classList.add('btnReceita'); // Adiciona classes ao botão, se necessário
+    botaoEditarAcoes.innerText = 'Editar';
+    botaoEditarAcoes.classList.add('btnReceita');
+
     botaoEditarAcoes.style.display = 'inline-block';
-    // Adicione um event listener ao botão, se desejar
+
     botaoEditarAcoes.addEventListener('click', () => {
       
       // Lógica da ação do botão aqui
