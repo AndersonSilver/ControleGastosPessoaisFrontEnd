@@ -254,6 +254,18 @@ nav .nav-link .icon {
 	font-size: 18px;
 	color: var(--dark);
 }
+.iconeInicialDespesa{
+	font-size: 40px;
+	color: rgb(223, 5, 5);
+}
+.iconeInicialReceita{
+	font-size: 40px;
+	color: rgb(5, 223, 5);
+}
+.iconeInicialSaldo{
+	font-size: 40px;
+	color: rgb(35, 35, 156);
+}
 nav .nav-link .badge {
 	position: absolute;
 	top: -12px;
