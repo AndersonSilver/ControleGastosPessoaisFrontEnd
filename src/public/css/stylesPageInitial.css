@@ -6,7 +6,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 :root {
 	--grey: rgb(28, 28, 30);
 	--dark-grey: #8D8D8D;
@@ -437,8 +436,9 @@ main .content-data .head {
 	margin-bottom: 24px;
 }
 main .content-data .head h3 {
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 600;
+	color: rgb(239, 239, 239);
 }
 main .content-data .head .menu {
 	position: relative;
