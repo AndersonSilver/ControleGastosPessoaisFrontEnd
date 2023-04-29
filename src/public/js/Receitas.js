@@ -18,6 +18,8 @@ async function searchAllUsers(){
 
     const userTable = document.getElementById("ListReceitas");
 
+    dados.sort((a, b) => new Date(b.data) - new Date(a.data));
+    
     dados.forEach((user) => {
     
     const row = userTable.insertRow();
