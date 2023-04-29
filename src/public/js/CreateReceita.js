@@ -19,7 +19,9 @@ async function CreateReceita(){
         data,
         conta,
     }
-
+    if (!valor || !status || !descricao || !categoria || !data || !conta) {
+        return;
+    }else {
     const response = await fetch(`http://localhost:3000/createReceita?id=${id}`, {
         method: 'POST',
         headers: {
@@ -35,6 +37,6 @@ async function CreateReceita(){
     if (dados === null) {
         console.log('Não foi possível carregar os dados');
     }
-
+    }
 
 }

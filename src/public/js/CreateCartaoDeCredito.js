@@ -18,6 +18,10 @@ async function CreateCartaoDeCredito(){
         bandeira
     }
 
+    if(!nome || !limite || !dataVencimento || !dataFechamento || !bandeira){
+        return
+    }else{
+
     const response = await fetch(`http://localhost:3000/createCartaoCredito?id=${id}`, {
         method: 'POST',
         headers: {
@@ -33,6 +37,6 @@ async function CreateCartaoDeCredito(){
     if (dados === null) {
         console.log('Não foi possível carregar os dados');
     }
-
+    }
 
 }

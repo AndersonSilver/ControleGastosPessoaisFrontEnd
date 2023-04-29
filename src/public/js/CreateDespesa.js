@@ -20,6 +20,10 @@ async function CreateDespesa(){
         conta,
     }
 
+    if (!valor || !status || !descricao || !categoria || !data || !conta) {
+        return;
+    }else {
+
     const response = await fetch(`http://localhost:3000/createDespesa?id=${id}`, {
         method: 'POST',
         headers: {
@@ -36,5 +40,5 @@ async function CreateDespesa(){
         console.log('Não foi possível carregar os dados');
     }
 
-
+    }
 }

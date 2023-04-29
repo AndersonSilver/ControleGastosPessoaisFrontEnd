@@ -23,7 +23,8 @@ async function searchAllUsers(){
     const row = userTable.insertRow();
 
     const ValorCell = row.insertCell();
-    ValorCell.innerText = user.valor;
+    ValorCell.innerText = " R$  " +user.valor;
+    ValorCell.style.color = "green";
 
     const StatusCell = row.insertCell();
     StatusCell.innerText = user.status;
@@ -73,10 +74,14 @@ async function searchAllUsers(){
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         }
+
+        
       });
         const retorno = await responseDelete.json();
         console.log(retorno);
-
+        setTimeout(function() {
+          location.reload();
+      }, 1);
     });
 
     acoesCell.appendChild(botaoDeletarAcoes); // Adiciona o botão à célula da coluna "Ações"

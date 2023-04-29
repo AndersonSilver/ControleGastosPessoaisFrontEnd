@@ -68,10 +68,13 @@ async function searchAllUsersDespesas(){
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         }
+        
       });
         const retorno = await responseDelete.json();
         console.log(retorno);
-     
+        setTimeout(function() {
+          location.reload();
+      }, 1);
     });
 
     acoesCell.appendChild(botaoDeletarAcoes); // Adiciona o botão à célula da coluna "Ações"
