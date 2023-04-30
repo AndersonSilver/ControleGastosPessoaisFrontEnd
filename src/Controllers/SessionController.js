@@ -40,6 +40,10 @@ class SessionController {
         res.render('CadastroCartaoDeCrédito');
     }
 
+    async CadastroContaBancaria(req,res){
+        res.render('CadastroContaBancaria');
+    }
+
 }
 
 export default new SessionController();
