@@ -53,6 +53,12 @@
 
 ![image](https://user-images.githubusercontent.com/125804426/235447943-8c0d8760-66c8-41da-b5e1-90909d436ddc.png)
 
+# Cadastro Conta Bancaria.
+
+* Aqui você poderá adicionar sua conta bancaria, que sera vinculado com seu cadastro despesas e Receitas.
+
+![image](https://user-images.githubusercontent.com/125804426/235448757-230b96f4-bbe7-437c-a5fe-b1163645812c.png)
+
 Projeto está em fase de contrução, haverá grandes melhoria ao decorrer do tempo.
 
 
