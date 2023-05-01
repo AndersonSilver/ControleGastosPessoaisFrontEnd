@@ -31,6 +31,9 @@ async function CreateReceita(){
         
         body: JSON.stringify(dataReceita)
     });
+    setTimeout(function() {
+        location.reload();
+    }, 1);
 
     const dados = await response.json();
 

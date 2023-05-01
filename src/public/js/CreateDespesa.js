@@ -33,6 +33,9 @@ async function CreateDespesa(){
         
         body: JSON.stringify(dataDespesa)
     });
+    setTimeout(function() {
+        location.reload();
+    }, 1);
 
     const dados = await response.json();
 

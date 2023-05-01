@@ -18,6 +18,7 @@ async function searchAllUsersDespesas(){
 
     const userTable = document.getElementById("ListDespesas");
 
+    dados.sort((a, b) => new Date(b.data) - new Date(a.data));
     dados.forEach((user) => {
     
     const row = userTable.insertRow();
