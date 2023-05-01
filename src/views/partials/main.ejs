@@ -45,23 +45,6 @@
   <div class="data">
     <div class="content-data">
       <div class="head">
-        <h3>Balanço Geral</h3>
-        <div class="menu">
-          <i class="bx bx-dots-horizontal-rounded icon"></i>
-          <ul class="menu-link">
-            <li><a href="#">Edit</a></li>
-            <li><a href="#">Save</a></li>
-            <li><a href="#">Remove</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="chart">
-        <div id="chart"></div>
-        <canvas class="GraficoDashboard" id="meuGrafico"></canvas>
-      </div>
-    </div>
-    <div class="content-data">
-      <div class="head">
         <h3>Transações</h3>
         <div class="menu">
           <i class="bx bx-dots-horizontal-rounded icon"></i>
@@ -76,6 +59,23 @@
       <%- include ('ReceitasCriadasUserDashboard.ejs'); -%>
       <br />
       <%- include ('DespesasCriadasUserDashboard.ejs'); -%>
+    </div>
+    <div class="content-data">
+      <div class="head">
+        <h3>Balanço Geral</h3>
+        <div class="menu">
+          <i class="bx bx-dots-horizontal-rounded icon"></i>
+          <ul class="menu-link">
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">Save</a></li>
+            <li><a href="#">Remove</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="chart">
+        <div id="chart"></div>
+        <canvas class="GraficoDashboard" id="meuGrafico"></canvas>
+      </div>
     </div>
   </div>
 </main>
