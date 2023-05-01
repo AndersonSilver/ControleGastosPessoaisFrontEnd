@@ -11,7 +11,8 @@
 
 :diamond_shape_with_a_dot_inside: Você terá um dashboard de suas transações para seu controle :punch:
 
-![image](https://user-images.githubusercontent.com/125804426/235446976-11563e10-7a98-48b2-a133-d8acda5a5ea8.png)
+![image](https://user-images.githubusercontent.com/125804426/235453173-e7cb9d0a-2942-4f59-bf26-f2a0d4c1f2e0.png)
+
 
 # Antes disso você tera que criar sua conta e preencher seus dados em seu perfil.
 
