@@ -21,5 +21,42 @@ async function dadosReceita() {
 
     console.log(ResultFinal);
 
+    const valorElement = document.getElementById('valor');
+
+    if (valorElement !== null) {
+      valorElement.value = ResultFinal.valor;
+    }
+
+    const statusElement = document.getElementById('status');
+
+    if (statusElement !== null) {
+      statusElement.value = ResultFinal.status;
+    }
+
+    const descricaoElement = document.getElementById('descricao');
+
+    if (descricaoElement !== null) {
+      descricaoElement.value = ResultFinal.descricao;
+    }
+
+    const categoriaElement = document.getElementById('categoria');
+
+    if (categoriaElement !== null) {
+      categoriaElement.value = ResultFinal.categoria;
+    }
+
+    const dataElement = document.getElementById('data');
+
+    if (dataElement !== null) {
+      dataElement.value = ResultFinal.data;
+    }
+
+    const contaElement = document.getElementById('conta');
+
+    if (contaElement !== null) {
+      contaElement.value = ResultFinal.conta;
+    }
+
+    return ResultFinal;
   }
   
