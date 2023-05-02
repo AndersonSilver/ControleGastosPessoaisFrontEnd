@@ -43,6 +43,9 @@ class SessionController {
     async CadastroContaBancaria(req,res){
         res.render('CadastroContaBancaria');
     }
+    async EditarReceitas(req,res){
+        res.render('UpdateReceitas');
+    }
 
 }
 
