@@ -1,0 +1,25 @@
+<main class="mainReceita">
+  <form>
+    <div class="container">
+      <!-- MAIN -->
+      <br /><br />
+      <h1 style="color: aliceblue; font-size: 40px"><i class="bx bx-trending-up" style="color: green"></i> Receita</h1>
+      <br /><br />
+      <!-- MAIN -->
+      <div class="containerMain">
+        <!-- MAIN -->
+        <%- include ('FormularioEditarReceita.ejs'); -%>
+        <!-- MAIN -->
+      </div>
+      <br />
+      <div id="mensagem-erro" style="color: aliceblue; display: none"></div>
+      <div class="btnFund">
+        <button class="btn" id="btn_prof" name="submit" onclick="">Salvar</button>
+      </div>
+    </div>
+    <br />
+    <%- include ('ReceitasCriadasUser.ejs'); -%>
+  </form>
+
+  <!-- <script src="/js/CreateReceita.js"></script> -->
+</main>
