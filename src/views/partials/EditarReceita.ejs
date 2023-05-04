@@ -16,8 +16,11 @@
       <br />
       <div id="mensagem-erro" style="color: aliceblue; display: none"></div>
       <div class="btnFund">
-        <button class="btn" id="btn_prof" onclick="" style="text-decoration: none; color: white">Salvar Edição</button>
-        <button class="btn" id="btn_prof" onclick="">
+        <button class="btn" id="btn_prof" style="text-decoration: none; color: white">
+          <a href="/receitas" onclick="UpdateReceitas()" style="text-decoration: none; color: white">Salvar Edição</a>
+        </button>
+
+        <button class="btn" id="btn_prof">
           <a href="/receitas" style="text-decoration: none; color: white">Cancelar</a>
         </button>
       </div>
@@ -25,6 +28,6 @@
     <br />
     <!-- <%- include ('ReceitasCriadasUser.ejs'); -%> -->
   </form>
-
+  <script src="/js/UpdateReceitas.js"></script>
   <script src="/js/SearchReceita.js"></script>
 </main>
