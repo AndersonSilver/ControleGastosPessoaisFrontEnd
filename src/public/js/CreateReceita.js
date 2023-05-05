@@ -42,4 +42,13 @@ async function CreateReceita(){
     }
     }
 
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+          location.reload();
+        } else {
+          mensagemErro.textContent = "Erro ao criar receita.";
+          mensagemErro.style.display = "block";
+        }
+      };
+
 }

@@ -46,9 +46,6 @@ async function UpdateReceitas(){
 
             
         });
-        setTimeout(function() {
-            location.reload();
-        }, 1);
             const dados = await response.json();
 
         if (dados === null) {

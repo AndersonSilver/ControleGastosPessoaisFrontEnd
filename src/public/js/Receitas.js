@@ -79,8 +79,12 @@ async function searchAllUsers(){
         
       });
         const retorno = await responseDelete.json();
-        console.log(retorno);
         
+        setTimeout(() => {
+          window.location.reload();
+        }
+        , 10);
+
     });
 
     acoesCell.appendChild(botaoDeletarAcoes); // Adiciona o botão à célula da coluna "Ações"
