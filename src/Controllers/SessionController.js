@@ -49,6 +49,9 @@ class SessionController {
     async EditarDespesas(req,res){
         res.render('UpdateDespesas');
     }
+    async EditarCartaoDeCredito(req,res){
+        res.render('UpdateCartaoDeCredito');
+    }
 
 }
 
