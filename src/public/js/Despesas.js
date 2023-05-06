@@ -52,9 +52,7 @@ async function searchAllUsersDespesas(){
     botaoEditarAcoes.style.display = 'inline-block';
     // Adicione um event listener ao botão, se desejar
     botaoEditarAcoes.addEventListener('click', () => {
-      
-      // Lógica da ação do botão aqui
-    console.log('Botão clicado!', user); // Exemplo de ação do botão, você pode substituir por sua lógica
+      window.location.href = '/EditarDespesas?id=' + user.id;
     });
 
     acoesCell.appendChild(botaoEditarAcoes); // Adiciona o botão à célula da coluna "Ações"
