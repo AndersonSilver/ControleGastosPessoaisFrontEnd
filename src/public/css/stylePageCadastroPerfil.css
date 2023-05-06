@@ -4,7 +4,9 @@
     box-sizing: border-box;
     
 }
-
+.tabelaTransacoes{
+    gap: 1vh;
+}
 .mainReceita{
     min-height: 150vh;
 }
@@ -95,7 +97,7 @@
 
 .table td,
 .table th {
-  font-size: 18px;
+  font-size: 15px;
   padding: 30px;
 }
 
