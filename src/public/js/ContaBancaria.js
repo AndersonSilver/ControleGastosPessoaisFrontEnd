@@ -33,7 +33,7 @@ async function searchAllUsersContaBancaria(){
     tipoContaCell.innerText = user.tipoConta;
 
     const saldoCell = row.insertCell();
-    saldoCell.innerText = user.saldo;
+    saldoCell.innerText = " R$ " + user.saldo;
 
     
     const acoesCell = row.insertCell();
@@ -47,7 +47,7 @@ async function searchAllUsersContaBancaria(){
     botaoEditarAcoes.style.display = 'inline-block';
 
     botaoEditarAcoes.addEventListener('click', () => {
-    console.log('Botão clicado!', user); 
+      window.location.href = '/EditarContaBancaria?id=' + user.id; 
     });
 
     acoesCell.appendChild(botaoEditarAcoes);

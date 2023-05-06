@@ -1,0 +1,31 @@
+<main class="mainReceita">
+  <form>
+    <div class="container">
+      <!-- MAIN -->
+      <br /><br />
+      <h1 style="color: aliceblue; font-size: 40px">
+        <i class="bx bx-trending-up" style="color: green"></i> Editar Conta
+      </h1>
+      <br /><br />
+      <!-- MAIN -->
+      <div class="containerMain">
+        <!-- MAIN -->
+        <%- include ('FormularioEditarContaBancaria.ejs'); -%>
+        <!-- MAIN -->
+      </div>
+      <br />
+      <div id="mensagem-erro" style="color: aliceblue; display: none"></div>
+      <div class="btnFund">
+        <button class="btn" id="btn_prof" style="text-decoration: none; color: white">
+          <a href="/CadastroContaBancaria" onclick="UpdateContaBancaria()" style="text-decoration: none; color: white">Salvar Edição</a>
+        </button>
+
+        <button class="btn" id="btn_prof">
+          <a href="/CadastroContaBancaria" style="text-decoration: none; color: white">Cancelar</a>
+        </button>
+      </div>
+    </div>
+  </form>
+  <script src="/js/UpdateContaBancaria.js"></script>
+  <script src="/js/SearchContaBancaria.js"></script>
+</main>
