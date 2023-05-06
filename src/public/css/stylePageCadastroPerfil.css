@@ -93,6 +93,11 @@
     
 }
 
+.table td,
+.table th {
+  font-size: 21px;
+  padding: 30px;
+}
 
 .containerLeft{
 

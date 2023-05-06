@@ -55,6 +55,9 @@ class SessionController {
     async EditarContaBancaria(req,res){
         res.render('UpdateContaBancaria');
     }
+    async transacoes(req,res){
+        res.render('Transacoes');
+    }
 
 }
 
