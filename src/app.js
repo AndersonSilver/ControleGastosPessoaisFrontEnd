@@ -3,6 +3,7 @@ import routes from './routes';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import path from 'path';
+import ejs from 'ejs';
 
 class App{
     constructor(){
