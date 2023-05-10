@@ -9,7 +9,7 @@ async function CreateReceita(){
     const descricao = document.getElementById('descricao').value;   
     const categoria = document.getElementById('categoria').value;   
     const data = document.getElementById('data').value;   
-    const conta = document.getElementById('conta').value;   
+    const conta = document.getElementById('conta').value;
 
     const dataReceita = {
         valor,
