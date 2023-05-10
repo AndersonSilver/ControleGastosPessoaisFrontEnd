@@ -51,7 +51,7 @@ async function dadosReceita() {
       dataElement.value = ResultFinal.data;
     }
 
-    const contaElement = document.getElementById('conta');
+    const contaElement = document.getElementById('contas');
 
     if (contaElement !== null) {
       contaElement.value = ResultFinal.conta;
