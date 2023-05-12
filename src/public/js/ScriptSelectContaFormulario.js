@@ -1,7 +1,8 @@
 async function dadosContaBancaria() {
     const token = localStorage.getItem('resulttoken');
+    const id = localStorage.getItem('resultid');
   
-    const response = await fetch(`http://localhost:3000/searchContaBancariaAll`, {
+    const response = await fetch(`http://localhost:3000/searchContaBancaria?id=${id}`, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
@@ -18,13 +19,7 @@ async function dadosContaBancaria() {
   
     // Remove as opções existentes do select
     selectContas.innerHTML = '';
-  
-    // Adiciona uma opção padrão para selecionar uma conta
-    const optionPadrao = document.createElement('option');
-    optionPadrao.value = '';
-    optionPadrao.text = 'Selecione uma conta';
-    selectContas.add(optionPadrao);
-  
+
     // Adiciona uma opção para cada conta bancária
     dadosArray.forEach(conta => {
       const optionConta = document.createElement('option');

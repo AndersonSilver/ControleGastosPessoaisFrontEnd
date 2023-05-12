@@ -1,0 +1,56 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Adicionar Cartão
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: aliceblue">Cadastro Cartão de Crédito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">
+        <div class="containerLeft">
+          <div class="box">
+            <label for="">Nome:</label>
+            <input type="text" name="nome" id="nome" required />
+          </div>
+
+          <div class="box">
+            <label for="">Data Vencimento:</label>
+            <input type="date" name="dataVencimento" id="dataVencimento" required />
+          </div>
+          <div class="box">
+            <label for="">Data Fechamento:</label>
+            <input type="date" name="dataFechamento" id="dataFechamento" required />
+          </div>
+        </div>
+        <div class="containerDireito">
+          <div class="box">
+            <label for="">Limite:</label>
+            <input type="text" name="limite" id="limite" required />
+          </div>
+
+          <div class="box">
+            <label for="">Bandeira:</label>
+            <select name="bandeira" id="bandeira" required>
+              <option value="Mastercard">Mastercard</option>
+              <option value="Visa">Visa</option>
+              <option value="Elo">Elo</option>
+              <option value="American Express">American Express</option>
+              <option value="Hipercard">Hipercard</option>
+              <option value="Alelo">Alelo</option>
+            </select>
+          </div>
+          <div class="d-grid gap-5 col-20 mx-auto">
+            <button class="btn btn-primary" type="submit" name="submit" onclick="CreateCartaoDeCredito()">
+              Salvar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
