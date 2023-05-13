@@ -1,23 +1,14 @@
-<main class="mainReceita">
+<main>
   <form>
     <div class="container">
-      <!-- MAIN -->
       <br /><br />
-      <h1 style="color: aliceblue; font-size: 40px"><i class="bx bx-trending-up" style="color: green"></i> Receita</h1>
+      <h1 style="color: aliceblue; font-size: 40px">
+        <i class="bx bx-credit-card icon" style="color: rgb(255, 255, 255)"></i> Cadastro Receita
+      </h1>
       <br /><br />
-      <!-- MAIN -->
-      <div class="containerMain">
-        <!-- MAIN -->
-        <%- include ('FormularioCadastroReceita.ejs'); -%>
-        <!-- MAIN -->
-      </div>
-      <br />
-      <div id="mensagem-erro" style="color: aliceblue; display: none"></div>
-      <div class="btnFund">
-        <button class="btn" id="btn_prof" name="submit" onclick="CreateReceita(event)">Salvar</button>
-      </div>
+
+      <%- include ('FormularioCadastroReceita.ejs'); -%>
     </div>
-    <br />
     <%- include ('ReceitasCriadasUser.ejs'); -%>
   </form>
 
