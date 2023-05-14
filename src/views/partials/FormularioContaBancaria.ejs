@@ -1,47 +1,70 @@
-<div class="containerLeft">
-  <div class="box">
-    <label for="">Instituição:</label>
-    <select name="instituicao" id="instituicao" required>
-      <option value="Banco do Brasil">Banco do Brasil</option>
-      <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
-      <option value="Itaú">Itaú</option>
-      <option value="Bradesco">Bradesco</option>
-      <option value="Santander">Santander</option>
-      <option value="HSBC">HSBC</option>
-      <option value="BTG Pactual">BTG Pactual</option>
-      <option value="BTG Digital">BTG Digital</option>
-      <option value="Inter">Inter</option>
-      <option value="Next">Next</option>
-      <option value="NuConta"></option>
-      <option value="Nubank">Nubank</option>
-      <option value="Safra">Safra</option>
-      <option value="Modalmais">Modalmais</option>
-      <option value="Original">Original</option>
-      <option value="PagSeguro">PagSeguro</option>
-      <option value="Banrisul">Banrisul</option>
-      <option value="Sicredi">Sicredi</option>
-      <option value="Banco Intermedium">Banco Intermedium</option>
-      <option value="Banco do Nordeste">Banco do Nordeste</option>
-    </select>
-  </div>
-  <div class="box">
-    <label for="">Descricao:</label>
-    <input type="text" name="descricao" id="descricao" required />
-  </div>
-</div>
-<div class="containerDireito">
-  <div class="box">
-    <label for="">Saldo:</label>
-    <input type="text" name="saldo" id="saldo" required />
-  </div>
-  <div class="box">
-    <label for="">Tipo de Conta:</label>
-    <select name="tipoConta" id="tipoConta" required>
-      <option value="Conta Corrente">Conta Corrente</option>
-      <option value="Dinheiro">Dinheiro</option>
-      <option value="Poupança">Poupança</option>
-      <option value="Investimentos">Investimentos</option>
-      <option value="Outros">Outros</option>
-    </select>
+<button type="button" class="buttonAddCredit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <i class="bx bx-plus iconPlus"></i>
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: aliceblue">
+          <i class="bx bx-credit-card icon" style="color: rgb(255, 255, 255)"></i> Cadastro Conta Bancária
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">
+        <div class="containerLeft">
+          <div class="box">
+            <label for="">Instituição:</label>
+            <select name="instituicao" id="instituicao" required>
+              <option value="Banco do Brasil">Banco do Brasil</option>
+              <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
+              <option value="Itaú">Itaú</option>
+              <option value="Bradesco">Bradesco</option>
+              <option value="Santander">Santander</option>
+              <option value="HSBC">HSBC</option>
+              <option value="BTG Pactual">BTG Pactual</option>
+              <option value="BTG Digital">BTG Digital</option>
+              <option value="Inter">Inter</option>
+              <option value="Next">Next</option>
+              <option value="NuConta"></option>
+              <option value="Nubank">Nubank</option>
+              <option value="Safra">Safra</option>
+              <option value="Modalmais">Modalmais</option>
+              <option value="Original">Original</option>
+              <option value="PagSeguro">PagSeguro</option>
+              <option value="Banrisul">Banrisul</option>
+              <option value="Sicredi">Sicredi</option>
+              <option value="Banco Intermedium">Banco Intermedium</option>
+              <option value="Banco do Nordeste">Banco do Nordeste</option>
+            </select>
+          </div>
+          <div class="box">
+            <label for="">Descricao:</label>
+            <input type="text" name="descricao" id="descricao" required />
+          </div>
+        </div>
+        <div class="containerDireito">
+          <div class="box">
+            <label for="">Saldo:</label>
+            <input type="text" name="saldo" id="saldo" required />
+          </div>
+          <div class="box">
+            <label for="">Tipo de Conta:</label>
+            <select name="tipoConta" id="tipoConta" required>
+              <option value="Conta Corrente">Conta Corrente</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Poupança">Poupança</option>
+              <option value="Investimentos">Investimentos</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </div>
+          <div class="d-grid gap-5 col-20 mx-auto">
+            <button class="btn btn-outline-info" type="submit" name="submit" onclick="CreateContaBancaria()">
+              Salvar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
