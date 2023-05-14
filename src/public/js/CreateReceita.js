@@ -10,6 +10,7 @@ async function CreateReceita(){
     const categoria = document.getElementById('categoria').value;   
     const data = document.getElementById('data').value;   
     const conta = document.getElementById('contas').value;
+    const idConta = document.getElementById('contas').id;
 
     const dataReceita = {
         valor,
@@ -19,9 +20,26 @@ async function CreateReceita(){
         data,
         conta,
     }
-    if (!valor || !status || !descricao || !categoria || !data || !conta) {
+    if (!valor || !status || !descricao || !categoria || !data || !conta || !idCOnta) {
         return;
     }else {
+
+    const responseConta = await fetch(`http://localhost:3000/somatorioSaldoContaBancaria?id=${idConta}`, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        },
+        
+        body: JSON.stringify(dataReceita.valor)
+    });
+
+    const dadosConta = await responseConta.json();
+
+    if (dadosConta === null) {
+        console.log('Não foi possível carregar os dados');
+    }
+    
     const response = await fetch(`http://localhost:3000/createReceita?id=${id}`, {
         method: 'POST',
         headers: {

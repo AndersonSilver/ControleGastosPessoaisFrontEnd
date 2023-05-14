@@ -25,7 +25,10 @@ async function dadosContaBancaria() {
       const optionConta = document.createElement('option');
       optionConta.value = conta.instituicao;
       optionConta.text = `${conta.instituicao}`;
+      optionConta.id = conta.id;
       selectContas.add(optionConta);
+
+      console.log(optionConta);
     });
   }
   window.addEventListener('load', dadosContaBancaria);
