@@ -10,7 +10,6 @@ async function CreateReceita(){
     const categoria = document.getElementById('categoria').value;   
     const data = document.getElementById('data').value;   
     const conta = document.getElementById('contas').value;
-    const idConta = document.getElementById('contas').id;
 
     const dataReceita = {
         valor,
@@ -20,27 +19,11 @@ async function CreateReceita(){
         data,
         conta,
     }
-    if (!valor || !status || !descricao || !categoria || !data || !conta || !idConta) {
+    if (!valor || !status || !descricao || !categoria || !data || !conta) {
         return;
     }else {
-
-    const responseConta = await fetch(`http://localhost:3000/somatorioSaldoContaBancaria?id=${idConta}`, {
-        method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json'
-        },
         
-        body: JSON.stringify(dataReceita.valor)
-    });
-
-    const dadosConta = await responseConta.json();
-
-    if (dadosConta === null) {
-        console.log('Não foi possível carregar os dados');
-    }
-    
-    const response = await fetch(`http://localhost:3000/createReceita?id=${id}`, {
+        const response = await fetch(`http://localhost:3000/createReceita?id=${id}`, {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`,
@@ -48,16 +31,16 @@ async function CreateReceita(){
         },
         
         body: JSON.stringify(dataReceita)
-    });
-    setTimeout(function() {
-        location.reload();
-    }, 1);
+        });
+        setTimeout(function() {
+            location.reload();
+        }, 1);
 
-    const dados = await response.json();
+        const dados = await response.json();
 
-    if (dados === null) {
-        console.log('Não foi possível carregar os dados');
-    }
+        if (dados === null) {
+            console.log('Não foi possível carregar os dados');
+        }
     }
 
     xhr.onload = function() {
