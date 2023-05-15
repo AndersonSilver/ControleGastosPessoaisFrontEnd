@@ -20,7 +20,7 @@ async function CreateReceita(){
         data,
         conta,
     }
-    if (!valor || !status || !descricao || !categoria || !data || !conta || !idCOnta) {
+    if (!valor || !status || !descricao || !categoria || !data || !conta || !idConta) {
         return;
     }else {
 
