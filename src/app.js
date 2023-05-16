@@ -20,7 +20,9 @@ class App{
         this.server.use(bodyParser.json());
         this.server.set("view engine", "ejs");
         this.server.set("views", path.join(__dirname, "views"));
-        this.server.use(express.static("src/public"));
+        // this.server.use(express.static("src/public"));
+        this.server.use(express.static(__dirname + '/public', { type: 'text/css' }));
+
     }
     routes(){
         this.server.use(routes);
