@@ -21,21 +21,7 @@ class App{
         this.server.set("view engine", "ejs");
         this.server.set("views", path.join(__dirname, "views"));
         // this.server.use(express.static("src/public"));
-        // this.server.use(express.static(__dirname + '/public', { type: 'text/css' }));
-        this.server.use(express.static(__dirname + '/public', { 
-            type: 'text/css', 
-            setHeaders: function(res, path, stat) {
-              res.set('Content-Type', 'text/css');
-            }
-          }));
-          this.server.use(express.static(__dirname + '/public', { 
-            type: 'application/javascript', 
-            setHeaders: function(res, path, stat) {
-              res.set('Content-Type', 'application/javascript');
-            }
-          }));
-          
-          
+        this.server.use(express.static(path.join(__dirname, "public")));
 
     }
     routes(){
