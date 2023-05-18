@@ -208,13 +208,13 @@ input:-webkit-autofill
     border-bottom-left-radius: 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: slidein 1.6s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: slidein 0s; /*MODIFIQUEI DE 3s PARA 1.3s*/
 
     z-index: 12;
 }
 
 .sign-up-js .content::before {
-    animation: slideout 1.6s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: slideout 0s; /*MODIFIQUEI DE 3s PARA 1.3s*/
 
     z-index: 12;
 }
@@ -238,13 +238,13 @@ input:-webkit-autofill
 
     z-index: -1;
     position: relative;
-    animation: deslocamentoEsq 1.6s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: deslocamentoEsq 0s; /*MODIFIQUEI DE 3s PARA 1.3s*/
 }
 
 .sign-up-js .second-content .second-column {
     position: relative;
     z-index: -1;
-    animation: deslocamentoDir 1.6s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: deslocamentoDir 0s; /*MODIFIQUEI DE 3s PARA 1.3s*/
 }
 
 /*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
@@ -353,18 +353,6 @@ input:-webkit-autofill
             z-index: 12;
         }
     
-        25% {
-            top: -80px;
-            opacity: .5;
-            /* z-index: 12; NÃO HÁ NECESSIDADE */
-        }
-    
-        50% {
-            top: -100px;
-            opacity: .2;
-            /* z-index: 12; NÃO HÁ NECESSIDADE */
-        }
-    
         to {
             top: -110px;
             opacity: 0;
@@ -378,17 +366,6 @@ input:-webkit-autofill
         from {
             top: 0;
             z-index: 12;
-        }
-    
-        25% {
-            top: 80px;
-            /* z-index: 12;  NÃO HÁ NECESSIDADE*/
-        }
-    
-        50% {
-            top: 100px;
-            /* z-index: 12; NÃO HÁ NECESSIDADE*/
-            /* background-color: yellow;  Exemplo que dei no vídeo*/
         }
     
         to {
@@ -405,22 +382,7 @@ input:-webkit-autofill
             top: 0;
             height: 40%;
         }
-    
-        25% {
-            top: 5%;
-            height: 50%;
-        }
-    
-        50% {
-            top: 25%;
-            height: 60%;
-        }
-    
-        75% {
-            top: 45%;
-            height: 50%;
-        }
-    
+
         to {
             top: 60%;
             height: 40%;
@@ -433,22 +395,7 @@ input:-webkit-autofill
             top: 60%;
             height: 40%;
         }
-    
-        25% {
-            top: 45%;
-            height: 50%;
-        }
-    
-        50% {
-            top: 25%;
-            height: 60%;
-        }
-    
-        75% {
-            top: 5%;
-            height: 50%;
-        }
-    
+
         to {
             top: 0;
             height: 40%;
@@ -474,26 +421,27 @@ input:-webkit-autofill
         width: 100%;
     }
 }
+@media screen and (max-width: 1050px) {
+    .container {
+        height: 1050px;
+    }
+}
 
 @media screen and (max-height: 920px) {
-        .content::before {
-        background-color: #00000081;
-        height: 37%;
-        margin: 0;
-        padding: 0;
-        left: 0;
-        margin: 0;
-        border-radius: 0;
-
+    .first-content::before {
+        background-color: transparent;
     }
+    .second-content::before {
+        background-color: transparent;
+    }
+}
 
-
-    @media screen and (max-height: 900px) {
+@media screen and (max-height: 900px) {
         body {
             min-height: 900px;
         }
     }
-}
+
 
 
 
