@@ -6,7 +6,7 @@
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    min-height: 500px;
+    
 }
 .container {
     display: flex;
@@ -20,6 +20,7 @@ body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    min-height: 850px;
 }
 .content {
     border-radius: 15px;
@@ -500,6 +501,9 @@ input:focus {
     }
     .description-second {
         font-size: 13px;
+    }
+    body{
+        background-size: 100%;
     }
 }
 
