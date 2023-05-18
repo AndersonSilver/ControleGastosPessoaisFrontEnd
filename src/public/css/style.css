@@ -57,6 +57,7 @@ body {
 }
 .description-primary {
     color: #ffffff;
+    
 }
 .description-second {
     color: #020101;
@@ -103,7 +104,8 @@ body {
     text-align: center;
     width: 40%;
     z-index: 10;
-    padding: 10px;
+    padding-bottom: 80px;
+    padding-top: 50px;
 }
 .second-column {
     width: 60%;
@@ -324,13 +326,24 @@ input:focus {
     .second-content::before {
         background-color: transparent;
     }
+    .description-primary {
+        color: #ffffff;
+        font-size: 20px;
+        font-style: italic;
+        
+    }
+    .description-second {
+        color: #020101;
+        font-size: 18px;
+        font-style: italic;
+    }
     .content {
-        width: 100%;
+        width: 70%;
         height: 100%;
     }
 
     .content::before {
-        width: 100%;
+        width: 80%;
         height: 40%;
         top: 0;
         border-radius: 0;
@@ -416,9 +429,52 @@ input:focus {
    
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 640px) {
     .form {
-        width: 50%;
+        width: 90%;
+    }
+    .description-primary {
+        color: #ffffff;
+        font-size: 18px;
+        font-style: italic;
+        
+    }
+    .description-second {
+        color: #020101;
+        font-size: 15px;
+        font-style: italic;
+    }
+}
+@media screen and (max-width: 540px) {
+
+    .description-primary {
+        color: #ffffff;
+        font-size: 17px;
+        font-style: italic;
+        
+    }
+    .description-second {
+        color: #020101;
+        font-size: 15px;
+        font-style: italic;
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+    .description-primary {
+        color: #ffffff;
+        font-size: 15px;
+        font-style: italic;
+        
+    }
+    .description-second {
+        color: #020101;
+        font-size: 13px;
+        font-style: italic;
+    }
+    .title-primary{
+        font-size: 18px;
     }
 }
 
@@ -426,11 +482,24 @@ input:focus {
     .form {
         width: 100%;
     }
+    .description-primary {
+        font-size: 12px;
+        
+    }
+    .description-second {
+        font-size: 13px;
+    }
 }
-
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 325px) {
     .form {
         width: 100%;
+    }
+    .description-primary {
+        font-size: 11px;
+        
+    }
+    .description-second {
+        font-size: 13px;
     }
 }
 
