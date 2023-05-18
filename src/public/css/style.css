@@ -147,7 +147,9 @@ body {
     height: 45px;
     width: 100%;
     border: none;
-    background-color: #ecf0f1;
+    background-color: transparent;
+    border-bottom: #000000 solid 1px;
+    
 }
 input:-webkit-autofill 
 {    
@@ -155,13 +157,13 @@ input:-webkit-autofill
     -webkit-text-fill-color: #000 !important;
 }
 .label-input {
-    background-color: #ecf0f1;
+    background: transparent;
     display: flex;
     align-items: center;
     margin: 8px;
 }
 .icon-modify {
-    color: #7f8c8d;
+    color: #000000;
     padding: 0 5px;
 }
 
@@ -188,8 +190,12 @@ input:-webkit-autofill
 .password::first-letter {
     text-transform: capitalize;
 }
-
-
+.form input::placeholder{
+    color: #000000;
+}
+input:focus {
+    outline: none;
+  }
 
 .sign-in-js .first-content .first-column {
     z-index: -1;
@@ -442,7 +448,20 @@ input:-webkit-autofill
         }
     }
 
-
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      border: 1px solid white;
+      -webkit-text-fill-color: rgb(0, 0, 0) !important;
+      -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+      transition: background-color 5000s ease-in-out 0s;
+      border-style: none;
+    }
 
 
 
