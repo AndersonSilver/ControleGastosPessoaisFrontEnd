@@ -6,6 +6,7 @@
 }
 body {
     font-family: 'Open Sans', sans-serif;
+    min-height: 500px;
 }
 .container {
     display: flex;
@@ -442,11 +443,6 @@ input:focus {
     }
 } */
 
-@media screen and (max-height: 900px) {
-        body {
-            min-height: 900px;
-        }
-    }
 
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
