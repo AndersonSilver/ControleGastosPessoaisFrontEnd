@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrazTec Official</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- NAVBAR CREATION -->
+    <header class="header">
+      <nav class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#">Portifólio</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <a href="#">Ajuda</a>
+      </nav>
+
+      <form action="" class="search-bar">
+        <input type="text" placeholder="Procurar..." />
+        <button><i class="bx bx-search"></i></button>
+      </form>
+    </header>
+    <!-- LOGIN FORM CREATION -->
+    <div class="background"></div>
+    <div class="container">
+      <div class="item">
+        <h2 class="logo"><i class="bx bxl-xing"></i>BrazTec</h2>
+        <div class="text-item">
+          <h2>Bem Vindo! <br /><span> a BrazTec </span></h2>
+          <p>
+            Cuidar do seu dinheiro pode ser simples. Com o nosso gerenciador, você organiza e planeja sua vida
+            financeira em um único lugar.
+          </p>
+          <div class="social-icon">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="login-section">
+        <div class="form-box login">
+          <form action="">
+            <h2>Entrar</h2>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-envelope"></i></span>
+              <input id="emailLogin" type="email" autocomplete="email" required />
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+              <input id="passwordLogin" type="password" autocomplete="password" required />
+              <label>Senha</label>
+            </div>
+
+            <div class="remember-password">
+              <label for=""><input type="checkbox" />Lembrar-me</label>
+              <a href="#">Esqueceu a Senha</a>
+            </div>
+
+            <button class="btn" type="button" onclick="signIn()" id="btn_signIn">Entrar</button>
+            <div class="create-account">
+              <p>
+                Criar uma nova conta?
+                <a href="#" class="register-link">Inscrever-se</a>
+              </p>
+            </div>
+            <div id="returnErrorsLogin" class="returnErrorsLogin"></div>
+          </form>
+        </div>
+        <div class="form-box register">
+          <form action="">
+            <h2>Sign Up</h2>
+
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-user"></i></span>
+              <input id="creatingUsername" type="text" autocomplete="off" required />
+              <label for="creatingUsername">Usuário</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-envelope"></i></span>
+              <input id="creatingEmail" type="email" autocomplete="email" required />
+              <label for="creatingEmail">Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+              <input id="creatingPassword" type="password" required />
+              <label>Password</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+              <input id="creatingRepeatPassword" type="password" required />
+              <label for="">Repeat Password</label>
+            </div>
+            <div class="remember-password">
+              <label for=""><input type="checkbox" />I agree with this statment</label>
+            </div>
+            <button class="btn" type="button" onclick="signUp()" id="btn_signUp">SignUp</button>
+
+            <div class="create-account">
+              <p>
+                Already Have An Account?
+                <a href="#" class="login-link">Sign In</a>
+              </p>
+            </div>
+
+            <div id="returnErrorsScreenCreateUsers" class="returnErrorsScreenCreateUsers"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- SIGN UP FORM CREATION -->
+
+    <script src="/js/index.js"></script>
+    <script src="/js/creatingUsers.js"></script>
+    <script src="/js/ValidatedUser.js"></script>
+  </body>
+</html>
