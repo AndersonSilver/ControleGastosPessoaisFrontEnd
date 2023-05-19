@@ -24,8 +24,8 @@ body {
 }
 .content {
     border-radius: 15px;
-    width: 960px;
-    height: 50%;
+    width: 1000px;
+    height: 550px;
     justify-content: space-between;
     align-items: center;
     position: relative;
