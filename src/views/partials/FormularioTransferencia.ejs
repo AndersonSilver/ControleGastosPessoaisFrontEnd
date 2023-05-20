@@ -1,0 +1,53 @@
+<button type="button" class="buttonAddCredit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <i class="bx bx-plus iconPlus"></i>
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: aliceblue">
+          <i class="bx bx-transfer-alt" style="color: rgb(255, 255, 255)"></i> Transferir
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">
+        <div class="containerLeft">
+          <div class="box">
+            <label for="">Valor:</label>
+            <input type="number" name="valor" id="valor" required />
+          </div>
+
+          <div class="box">
+            <label for="">De conta:</label>
+            <input type="text" name="deConta" id="deConta" required />
+          </div>
+
+          <div class="box">
+            <label for="">Para Conta:</label>
+            <input type="text" name="paraConta" id="paraConta" required />
+          </div>
+        </div>
+
+        <div class="containerDireito">
+          <div class="box">
+            <label for="">Data:</label>
+            <input type="date" name="data" id="data" required />
+          </div>
+
+          <div class="box">
+            <label for="">Observação:</label>
+            <input type="text" name="observacao" id="observacao" required />
+          </div>
+
+          <div class="d-grid gap-5 col-20 mx-auto">
+            <button class="btn btn-outline-info" type="submit" name="submit" onclick="">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>

@@ -1,5 +1,14 @@
 <section id="sidebar">
-  <a href="#" class="brand"><i class="bx bxl-flutter icon"></i> BrazTec</a>
+  <a href="#" class="brand"
+    ><i class="bx bxl-flutter icon"></i> BrazTec
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      style="background-color: transparent; color: white; border: none; font-size: 30px; margin-left: 70px"
+    >
+      <i class="bx bxs-grid"></i></button
+  ></a>
+
   <ul class="side-menu">
     <li class="divider" data-text="Menu">Menu</li>
     <br />
@@ -22,7 +31,7 @@
       <a href="/transacoes"><i class="bx bxs-chart icon"></i> Transações</a>
     </li>
     <li>
-      <a href="#"><i class="bx bx-book-bookmark icon"></i> Transferência</a>
+      <a href="/transferencia"><i class="bx bx-book-bookmark icon"></i> Transferência</a>
     </li>
   </ul>
 
@@ -32,4 +41,5 @@
       <p>Torne-se um membro <strong> PRO </strong> e aproveite todos os <strong> recursos </strong></p>
     </div>
   </div>
+  <script src="/js/AparecerSidebar.js"></script>
 </section>

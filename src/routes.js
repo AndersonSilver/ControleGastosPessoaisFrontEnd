@@ -20,5 +20,6 @@ app.get('/EditarDespesas', SessionController.EditarDespesas);
 app.get('/EditarCartaoDeCredito', SessionController.EditarCartaoDeCredito);
 app.get('/EditarContaBancaria', SessionController.EditarContaBancaria);
 app.get('/transacoes', SessionController.transacoes);
+app.get('/transferencia', SessionController.transferencia);
 
 export default app;

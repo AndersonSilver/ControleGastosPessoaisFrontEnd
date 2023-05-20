@@ -58,6 +58,9 @@ class SessionController {
     async transacoes(req,res){
         res.render('./Transacoes/Transacoes');
     }
+    async transferencia(req,res){
+        res.render('./Transferencias/Transferencias');
+    }
 
 }
 

@@ -590,10 +590,6 @@ main .btn-send:hover {
 /* CONTENT */
 
 
-
-
-
-
 @media screen and (max-width: 768px) {
 	#content {
 		position: relative;
@@ -603,5 +599,11 @@ main .btn-send:hover {
 	nav .nav-link,
 	nav .divider {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 1450px) {
+	#sidebar {
+		width: 50%;
 	}
 }
