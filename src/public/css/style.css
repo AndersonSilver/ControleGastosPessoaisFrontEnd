@@ -328,10 +328,14 @@ input:focus {
         background-color: transparent;
     }
     .description-primary {
-        color: #ffffff;
+        color: #000000;
         font-size: 20px;
         font-style: italic;
-        
+    }
+    .title-primary {
+        color: #000000;
+        font-size: 35px;
+        font-weight: 700;
     }
     .description-second {
         color: #020101;

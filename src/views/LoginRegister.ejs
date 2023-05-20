@@ -1,128 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Login</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="content first-content">
-            <div class="first-column">
-                <h2 class="title title-primary">Bem vindo a BrazTec !</h2>
-                <br>
-                <p class="description description-primary">Cuidar do seu dinheiro pode ser simples.</p>
-                <p class="description description-primary">Com o nosso gerenciador, você organiza e planeja sua vida
-                    financeira em um único lugar.</p>
-                <button id="signin" class="btn btn-primary">Login</button>
-            </div>    
-            <div class="second-column">
-                <h2 class="title title-second">Criar Conta</h2>
-                <br>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>        
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- social media -->
-                <p class="description description-second">Use seu e-mail para se cadastrar:</p>
-                <form class="form">
-                                <label class="label-input" for="">
-                                    <i class="far fa-user icon-modify"></i>
-                                    <input id="creatingUsername" type="text" autocomplete="off" placeholder="Nome" required />
-                                </label>
-                                
-                                <label class="label-input" for="">
-                                    <i class="far fa-envelope icon-modify"></i>
-                                    <input id="creatingEmail" type="email" autocomplete="email" placeholder="Email" required />
-                                </label>
-                                
-                                <label class="label-input" for="">
-                                    <i class="fas fa-lock icon-modify"></i>
-                                    <input id="creatingPassword" type="password" placeholder="Senha" required />
-                                </label>
+      <div class="content first-content">
+        <div class="first-column">
+          <h2 class="title title-primary">Bem vindo a BrazTec !</h2>
+          <br />
+          <p class="description description-primary">Cuidar do seu dinheiro pode ser simples.</p>
+          <p class="description description-primary">
+            Com o nosso gerenciador, você organiza e planeja sua vida financeira em um único lugar.
+          </p>
+          <button id="signin" class="btn btn-primary">Login</button>
+        </div>
+        <div class="second-column">
+          <h2 class="title title-second">Criar Conta</h2>
+          <br />
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-google-plus-g"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-linkedin-in"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+          <!-- social media -->
+          <p class="description description-second">Use seu e-mail para se cadastrar:</p>
+          <form class="form">
+            <label class="label-input" for="">
+              <i class="far fa-user icon-modify"></i>
+              <input id="creatingUsername" type="text" autocomplete="off" placeholder="Nome" required />
+            </label>
 
-                                <label class="label-input" for="">
-                                    <i class="fas fa-lock icon-modify"></i>
-                                    <input id="creatingRepeatPassword" type="password" placeholder="Repetir Senha" required />
-                                </label>
-                        
-                                <br>
-                            <br>
-                        <button class="btn btn-second" type="button" onclick="signUp()" id="btn_signUp">Cadastrar</button>     
-                        <div id="returnErrorsScreenCreateUsers" class="returnErrorsScreenCreateUsers"></div>  
-                </form>
-            </div><!-- second column -->
-        </div><!-- first content -->
-        <div class="content second-content">
-            <div class="first-column">
-                <h2 class="title title-primary" style="color: black;">Olá, Amigo!</h2>
-                <p class="description description-primary" style="color: black;">Insira seus dados pessoais</p>
-                <p class="description description-primary" style="color: black;">e comece a jornada conosco</p>
-                <button id="signup" class="btn btn-primary">Inscrever-se</button>
-            </div>
-            <div class="second-column">
-                <h2 class="title title-second">Entrar</h2>
-                <br>
-                <br>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- social media -->
-                <p class="description description-second">Use sua conta de Email:</p>
-                <form class="form">
-                
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input id="emailLogin" type="email" autocomplete="email" placeholder="Email" required >
-                    </label>
-                
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input id="passwordLogin" type="password" autocomplete="password" placeholder="Senha" required >
-                    </label>
-                
-                    <a class="password" href="#">Esqueceu sua senha?</a>
-                    <button class="btn btn-second" type="button" onclick="signIn()" id="btn_signIn">Entrar</button>
-                    <div id="returnErrorsLogin" class="returnErrorsLogin"></div>
-                </form>
-            </div><!-- second column -->
-        </div><!-- second-content -->
+            <label class="label-input" for="">
+              <i class="far fa-envelope icon-modify"></i>
+              <input id="creatingEmail" type="email" autocomplete="email" placeholder="Email" required />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fas fa-lock icon-modify"></i>
+              <input id="creatingPassword" type="password" placeholder="Senha" required />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fas fa-lock icon-modify"></i>
+              <input id="creatingRepeatPassword" type="password" placeholder="Repetir Senha" required />
+            </label>
+
+            <br />
+            <br />
+            <button class="btn btn-second" type="button" onclick="signUp()" id="btn_signUp">Cadastrar</button>
+            <div id="returnErrorsScreenCreateUsers" class="returnErrorsScreenCreateUsers"></div>
+          </form>
+        </div>
+        <!-- second column -->
+      </div>
+      <!-- first content -->
+      <div class="content second-content">
+        <div class="first-column">
+          <h2 class="title title-primary">Olá, Amigo!</h2>
+          <p class="description description-primary">Insira seus dados pessoais</p>
+          <p class="description description-primary">e comece a jornada conosco</p>
+          <button id="signup" class="btn btn-primary">Inscrever-se</button>
+        </div>
+        <div class="second-column">
+          <h2 class="title title-second">Entrar</h2>
+          <br />
+          <br />
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-google-plus-g"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-linkedin-in"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+          <!-- social media -->
+          <p class="description description-second">Use sua conta de Email:</p>
+          <form class="form">
+            <label class="label-input" for="">
+              <i class="far fa-envelope icon-modify"></i>
+              <input id="emailLogin" type="email" autocomplete="email" placeholder="Email" required />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fas fa-lock icon-modify"></i>
+              <input id="passwordLogin" type="password" autocomplete="password" placeholder="Senha" required />
+            </label>
+
+            <a class="password" href="#">Esqueceu sua senha?</a>
+            <button class="btn btn-second" type="button" onclick="signIn()" id="btn_signIn">Entrar</button>
+            <div id="returnErrorsLogin" class="returnErrorsLogin"></div>
+          </form>
+        </div>
+        <!-- second column -->
+      </div>
+      <!-- second-content -->
     </div>
     <script src="/js/app.js"></script>
     <script src="/js/creatingUsers.js"></script>
     <script src="/js/ValidatedUser.js"></script>
-</body>
+  </body>
 </html>
