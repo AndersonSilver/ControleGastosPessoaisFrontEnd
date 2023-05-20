@@ -1,15 +1,15 @@
 class SessionController {
 
     async store(req,res){
-        res.render('LoginRegister');
+        res.render('./Tela\ Login/LoginRegister');
     }
 
     async initial(req,res){
-        res.render('initial');
+        res.render('./Main/initial');
     }
 
     async meuperfil(req,res){
-        res.render('ConfiguracoesPerfilUsuario');
+        res.render('./Configuracao\ Perfil/ConfiguracoesPerfilUsuario');
     }
 
     async meusDados(req,res){
@@ -17,46 +17,46 @@ class SessionController {
     }
 
     async cadastroProfissonal(req,res){
-        res.render('ConfiguracoesPerfilUsuarioProfissional');
+        res.render('./Configuracao\ Perfil/ConfiguracoesPerfilUsuarioProfissional');
     }
 
     async cadastroFinanceiro(req,res){
-        res.render('ConfiguracoesPerfilUsuarioFinanceiro');
+        res.render('./Configuracao\ Perfil/ConfiguracoesPerfilUsuarioFinanceiro');
     }
 
     async dashboard(req,res){
-        res.render('initial');
+        res.render('./Main/initial');
     }
 
     async receitas(req,res){
-        res.render('CadastroReceitas');
+        res.render('./Receitas/CadastroReceitas');
     }
 
     async despesas(req,res){
-        res.render('CadastroDespesas');
+        res.render('./Despesas/CadastroDespesas');
     }
 
     async CadastroCartaoDeCredito(req,res){
-        res.render('CadastroCartaoDeCrédito');
+        res.render('./Cartao\ de\ Crédito/CadastroCartaoDeCrédito');
     }
 
     async CadastroContaBancaria(req,res){
-        res.render('CadastroContaBancaria');
+        res.render('./Conta\ Bancaria/CadastroContaBancaria');
     }
     async EditarReceitas(req,res){
-        res.render('UpdateReceitas');
+        res.render('./Receitas/UpdateReceitas');
     }
     async EditarDespesas(req,res){
-        res.render('UpdateDespesas');
+        res.render('./Despesas/UpdateDespesas');
     }
     async EditarCartaoDeCredito(req,res){
-        res.render('UpdateCartaoDeCredito');
+        res.render('./Cartao\ de\ Crédito/UpdateCartaoDeCredito');
     }
     async EditarContaBancaria(req,res){
-        res.render('UpdateContaBancaria');
+        res.render('./Conta\ Bancaria/UpdateContaBancaria');
     }
     async transacoes(req,res){
-        res.render('Transacoes');
+        res.render('./Transacoes/Transacoes');
     }
 
 }
