@@ -1,4 +1,10 @@
 
+document.getElementById('salvar').addEventListener('click', async function (event) {
+    event.preventDefault();
+    alert('Despesa cadastrada com sucesso!');
+    CreateDespesa();
+});
+  
 async function CreateDespesa(){
 
     const token = localStorage.getItem('resulttoken');
