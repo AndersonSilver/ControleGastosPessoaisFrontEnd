@@ -1,3 +1,5 @@
+let meuGrafico; // Variável global para armazenar o gráfico
+
 async function somatorioReceita() {
   const token = localStorage.getItem('resulttoken');
   const id = localStorage.getItem('resultid');
@@ -18,56 +20,71 @@ async function somatorioReceita() {
 
   const dadosReceita = await responseReceita.json();
   const dadosDespesa = await responseDespesas.json();
-  let dadosArrayDespesas = [];
-  let dadosArrayReceitas = [];
 
   if (dadosReceita === null) {
-    console.log('Não foi possível carregar os dados');
+    console.log('Não foi possível carregar os dados de receita');
   }
   if (dadosDespesa === null) {
-  console.log('Não foi possível carregar os dados'); 
+    console.log('Não foi possível carregar os dados de despesa');
   }
 
-  dadosReceita.forEach((userReceitas) => {
-    dadosArrayReceitas.push(userReceitas.valor);
-  });
+  const labelsReceita = dadosReceita.map((userReceitas) => userReceitas.descricao);
+  const valoresReceita = dadosReceita.map((userReceitas) => userReceitas.valor);
+  
+  const labelsDespesa = dadosDespesa.map((userDespesas) => userDespesas.descricao);
+  const valoresDespesa = dadosDespesa.map((userDespesas) => userDespesas.valor);
 
-  dadosDespesa.forEach((userDespesas) => {
-    dadosArrayDespesas.push(userDespesas.valor);
-  });
+  const canvas = document.getElementById('meuGrafico');
+
+// Restante do código do gráfico...
+
 
   const ctx = document.getElementById('meuGrafico').getContext('2d');
 
-const meuGrafico = new Chart(ctx, {
-  type: 'polarArea',
-  data: {
-    labels: ['Receitas', 'Despesas'],
-    datasets: [{
-      label: 'Valor',
-      data: [dadosArrayReceitas.reduce((a, b) => a + b, 0), dadosArrayDespesas.reduce((a, b) => a + b, 0)],
-      backgroundColor: [
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 99, 132, 0.2)'
-      ],
-      borderColor: [
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 99, 132, 1)'
-      ],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
+  if (meuGrafico) {
+    meuGrafico.destroy(); // Destruir gráfico existente, se houver
   }
-});
 
-   
+  meuGrafico = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [...labelsReceita, ...labelsDespesa],
+      datasets: [{
+        label: 'Valor',
+        data: [...valoresReceita, ...valoresDespesa],
+        backgroundColor: [
+          ...generateRandomColors(labelsReceita.length),
+          ...generateRandomColors(labelsDespesa.length)
+        ],
+        borderColor: [
+          ...generateRandomColors(labelsReceita.length),
+          ...generateRandomColors(labelsDespesa.length)
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        r: {
+          ticks: {
+            beginAtZero: true
+          }
+        }
+      }
+    }
+  });
 }
 
-somatorioReceita(); 
+// Função auxiliar para gerar cores aleatórias
+function generateRandomColors(quantity) {
+  const colors = [];
+  for (let i = 0; i < quantity; i++) {
+    const color = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
+      Math.random() * 256
+    )}, 0.2)`;
+    colors.push(color);
+  }
+  return colors;
+}
+
+somatorioReceita();
